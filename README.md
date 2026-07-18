@@ -26,7 +26,7 @@ The highest-stakes work is deterministic (`staycovered/checks.py`): an **exempti
 
 ## The economics, with a budget twist
 
-Same teacher/worker bet as the rest of this series ([#2 ClearAnswer](https://github.com/musharraf3/clearanswer), [#3 RightCall](https://github.com/musharraf3/rightcall)): Claude Fable 5 authored the skill pack once ([`skills/renewal-prep.md`](skills/renewal-prep.md)); Haiku 4.5 executes it. New this time: the expensive teacher arm runs as a **3-case spot-check** of the quality ceiling instead of the full suite — sample the ceiling, don't pay for it everywhere. Results from live API runs are committed in [`evals/results.md`](evals/results.md).
+Same teacher/worker bet as the rest of this series ([#2 ClearAnswer](https://github.com/musharraf3/clearanswer), [#3 RightCall](https://github.com/musharraf3/rightcall)): Claude Fable 5 authored the skill pack once ([`skills/renewal-prep.md`](skills/renewal-prep.md)); Haiku 4.5 executes it. New this time: the expensive teacher arm runs as a small **spot-check** of the quality ceiling instead of the full suite — sample the ceiling, don't pay for it everywhere. (This run: 2 cases, because the API account ran out of credits mid-run — which is its own kind of budget discipline.) Results from live API runs are committed in [`evals/results.md`](evals/results.md).
 
 | Arm | Model | Cases |
 |---|---|---|
