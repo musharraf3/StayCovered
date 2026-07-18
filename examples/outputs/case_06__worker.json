@@ -1,0 +1,192 @@
+{
+  "request_id": "case_06",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker",
+  "mode": "live",
+  "decision": "likely_exempt",
+  "memo": "Member is three months into an outpatient SUD treatment program and reported zero qualifying hours. Screening identifies a medically frail exemption: enrollment in substance-use disorder treatment is explicit grounds for exemption under EX-MEDICAL. No hours count is needed if the exemption is confirmed. The member should obtain a letter from the treatment provider/program documenting enrollment and submit it by 2026-08-10 (23.6 days remaining). This approach protects coverage during active treatment and avoids the zero-hours report that triggered the fear. Belt-and-suspenders plan: gather the provider letter as primary claim; separately note that no reportable hours exist, in case the state requests clarification. No practical barriers identified; the member's treatment program is the natural source of proof.",
+  "member_impact": "Good news: you don't have to count hours. Because you are in a treatment program for substance use right now, you are exempt from the 80-hour requirement. This means your Medicaid will not end because of hours \u2014 the requirement simply doesn't apply to you. What you need to do: Ask your treatment program for a short letter that says you are enrolled and receiving care there. Bring it or mail it to the address in the notice by August 10, 2026. That's it. Your treatment can continue without worry about this work requirement.",
+  "missing_documents": [
+    "Provider or program letter confirming enrollment in substance-use disorder treatment"
+  ],
+  "recommended_actions": [
+    "Contact the member's treatment program/provider and request a letter documenting enrollment in the substance-use disorder program. Letter should confirm member's name, member ID (SYN-MCD-0006), dates of enrollment, and the program name.",
+    "Submit the provider letter to the state by the due date (2026-08-10 23:59:00) \u2014 via mail, online portal, or by fax to the welfare agency address shown on the notice.",
+    "Keep a copy of the letter for the member's records.",
+    "If the program cannot provide a letter quickly, reach out to a local Medicaid help line or community organization navigator \u2014 the letter is standard documentation and the deadline allows time."
+  ],
+  "citations": [
+    {
+      "chunk_id": "EX-MEDICAL",
+      "quote": "People who are medically frail are exempt, including those with disabling mental health or substance-use conditions, serious or complex medical conditions, and people receiving treatment in a substance-use disorder program. A letter from a treating provider or program documenting the condition or enrollment is accepted proof.",
+      "verified": true
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "quote": "If an exemption applies, the 80-hour requirement does not apply to you at all, and reporting hours is unnecessary. Always check exemptions before counting hours. An exemption claim needs its proof document, and the state must accept reasonable evidence.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "info",
+      "detail": "24 days remain to respond (due 2026-08-10T23:59:00).",
+      "data": {
+        "days_remaining": 23.6
+      }
+    },
+    {
+      "check": "exemption",
+      "severity": "info",
+      "detail": "Likely exemption: medically frail. If confirmed, the 80-hour requirement does not apply at all. Proof to submit: a provider letter documenting the condition, disability, or enrollment in substance-use treatment.",
+      "data": {
+        "exemption": "medically_frail",
+        "proof": "a provider letter documenting the condition, disability, or enrollment in substance-use treatment"
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "error",
+      "detail": "Qualifying hours: 0 per month (none reported) \u2014 80 hours SHORT of the 80-hour standard. Close the gap with any qualifying mix (work, school, job training, community service) or confirm an exemption before relying on hours.",
+      "data": {
+        "total": 0,
+        "shortfall": 80
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (0) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "verification",
+    "received_at": "2026-07-11T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-08-10T23:59:00",
+    "hours_remaining": 567.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "EX-MEDICAL",
+      "score": 17.124,
+      "matched_terms": [
+        "disorder",
+        "exemption",
+        "medical",
+        "substance",
+        "treatment",
+        "use"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 1.151,
+      "matched_terms": [
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "score": 1.078,
+      "matched_terms": [
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 1.022,
+      "matched_terms": [
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-ALIGN",
+      "score": 4.292,
+      "matched_terms": [
+        "requirement",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 2.575,
+      "matched_terms": [
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "score": 4.204,
+      "matched_terms": [
+        "accepted",
+        "documentation",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "EX-CARETAKER",
+      "score": 3.1,
+      "matched_terms": [
+        "documentation",
+        "proof"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "verification notice \u00b7 24 days remaining \u00b7 due 2026-08-10T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "4 findings (1 error-level, 1 likely exemption)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "substance use disorder treatment exemption medical frailty"
+      },
+      "result_digest": "query 'substance use disorder treatment exemption medical frailty' \u2192 EX-MEDICAL (17.124), EX-INCARC (1.151), EX-OVERVIEW (1.078), DL-CURE (1.022)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "work requirement exemptions medically frail"
+      },
+      "result_digest": "query 'work requirement exemptions medically frail' \u2192 EX-MEDICAL (8.028), EX-OVERVIEW (5.041), EX-ALIGN (4.292), DOC-WORK (2.575)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "accepted documentation proof substance use treatment"
+      },
+      "result_digest": "query 'accepted documentation proof substance use treatment' \u2192 EX-MEDICAL (13.164), EX-INCARC (5.041), EX-BENEFITS (4.204), EX-CARETAKER (3.1)"
+    }
+  ],
+  "escalate": false,
+  "escalate_reason": null,
+  "policy_notes": [],
+  "model_decision": "likely_exempt",
+  "groundedness": {
+    "total_quotes": 2,
+    "verified_quotes": 2,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 5434,
+    "output_tokens": 1119
+  }
+}

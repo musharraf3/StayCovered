@@ -1,0 +1,13 @@
+{
+  "request_id": "case_08",
+  "one_liner": "Already meeting SNAP work rules — deemed compliant, one set of rules not two",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0008", "member_id": "SYN-MCD-0008", "state": "Demo State (SYNTHETIC)", "age": 41, "meeting_snap_or_tanf_requirements": true},
+  "notice": {"type": "verification", "title": "Action needed: report your qualifying hours", "notice_date": "2026-07-09T00:00:00", "respond_by": "2026-08-06T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "41-year-old receiving SNAP and already complying with SNAP's work requirements through a county employment program, about 60 hours a month. Received a separate Medicaid hours notice and assumes the whole process starts over from zero.",
+  "activities": [
+    {"type": "job_training", "description": "county employment program (SNAP E&T)", "monthly_hours": 60}
+  ],
+  "documents_on_hand": ["program_enrollment_letter"]
+}

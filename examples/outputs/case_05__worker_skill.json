@@ -1,0 +1,162 @@
+{
+  "request_id": "case_05",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker+skill",
+  "mode": "live",
+  "decision": "refer_navigator",
+  "memo": "Clock has breached: deadline (2026-07-06) passed 12 days ago (as of 2026-07-18). Coverage terminated for noncompliance\u2014missing renewal paperwork (moved apartments, packet went to old address). However, this is a procedural termination, not a real eligibility problem. Screening confirms hours are met (92/month; standard is 80) and pay stubs are on hand. Per DL-RECON: '90-day reconsideration period after the termination date' allows the state to 'reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed.' The member must act within the 90-day window (approximately 2026-10-04). This is NOT the end, but time is running and a navigator is needed to file the reconsideration request with the renewal packet and pay stubs. Per RT-HELP: 'Certified navigators, community health workers, legal-aid offices, and the state Medicaid ombudsman help with renewals, exemptions, and hearings at no charge. For a passed deadline... a navigator or legal aid should be involved.'",
+  "member_impact": "Good news: you can still fix this. Your coverage ended because the renewal letter went to your old address, not because you don't qualify. You have about 12 weeks left (until early October) to send in the renewal paperwork and your pay stubs, and the state will restart your coverage back to July 6. You need help right now from a free Medicaid worker or navigator \u2014 they know how to file the request so the state sees it in time. Call your state Medicaid office or a community health center near you and tell them your coverage was terminated on July 6 for a late renewal. They will help you send in the papers.",
+  "missing_documents": [],
+  "recommended_actions": [
+    "Contact a certified Medicaid navigator, community health worker, or legal-aid office immediately (free help exists per RT-HELP). Do NOT attempt to file alone once the deadline has passed.",
+    "Gather the complete renewal packet that was sent to the old address (or request a fresh copy from the state) and the pay stubs already on hand.",
+    "File the reconsideration request with the state Medicaid office within the 90-day window (by approximately 2026-10-04) citing the procedural termination and the 90-day reconsideration window (DL-RECON).",
+    "Include the pay stubs as proof that hours met the 80-hour standard (92 hours qualifying employment)."
+  ],
+  "citations": [
+    {
+      "chunk_id": "DL-RECON",
+      "quote": "If coverage is terminated for a procedural reason \u2014 missing paperwork, an unanswered notice \u2014 there is a 90-day reconsideration period after the termination date. Returning the renewal information within it lets the state reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed. Many people never learn this window exists.",
+      "verified": true
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "quote": "Certified navigators, community health workers, legal-aid offices, and the state Medicaid ombudsman help with renewals, exemptions, and hearings at no charge. For a passed deadline, a denied exemption, conflicting records, or any notice that does not make sense, a navigator or legal aid should be involved \u2014 these are exactly the cases they exist for.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "error",
+      "detail": "The response deadline (2026-07-06T23:59:00) has passed. This is NOT the end: after a procedural termination there is a 90-day reconsideration window (running to about 2026-10-04) in which coverage can be restored without a brand-new application. Act now, with a navigator.",
+      "data": {
+        "days_remaining": -11.4
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "info",
+      "detail": "Qualifying hours: 92 per month (92h employment) \u2014 meets the 80-hour standard.",
+      "data": {
+        "total": 92,
+        "shortfall": 0
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (1) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "noncompliance",
+    "received_at": "2026-06-06T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-07-06T23:59:00",
+    "hours_remaining": -273.0,
+    "breached": true
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DL-RECON",
+      "score": 8.727,
+      "matched_terms": [
+        "90",
+        "reconsideration",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 5.368,
+      "matched_terms": [
+        "90",
+        "days"
+      ]
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "score": 5.266,
+      "matched_terms": [
+        "deadline",
+        "passed"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 5.063,
+      "matched_terms": [
+        "days",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "REQ-SIXMONTH",
+      "score": 2.186,
+      "matched_terms": [
+        "renewal"
+      ]
+    },
+    {
+      "chunk_id": "DOC-VOLUNTEER",
+      "score": 1.806,
+      "matched_terms": [
+        "renewal"
+      ]
+    },
+    {
+      "chunk_id": "EX-PREGNANCY",
+      "score": 1.793,
+      "matched_terms": [
+        "coverage"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "noncompliance notice \u00b7 -11 days remaining \u00b7 due 2026-07-06T23:59:00 \u00b7 DEADLINE PASSED"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "3 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "reconsideration window 90 days deadline passed appeal"
+      },
+      "result_digest": "query 'reconsideration window 90 days deadline passed appeal' \u2192 DL-RECON (8.727), EX-INCARC (5.368), RT-HELP (5.266), DL-CURE (5.063)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "coverage terminated procedural reason renewal noncompliance restore"
+      },
+      "result_digest": "query 'coverage terminated procedural reason renewal noncompliance restore' \u2192 DL-RECON (10.733), REQ-SIXMONTH (2.186), DOC-VOLUNTEER (1.806), EX-PREGNANCY (1.793)"
+    }
+  ],
+  "escalate": true,
+  "escalate_reason": "Deadline passed 12 days ago; coverage terminated; 90-day reconsideration window is running (approximately 11 weeks remaining). Member is eligible on the merits (hours met, documents on hand) but termination is procedural (missed renewal packet due to move). Free navigator help is required to file the reconsideration request correctly and within the window.",
+  "policy_notes": [],
+  "model_decision": "refer_navigator",
+  "groundedness": {
+    "total_quotes": 2,
+    "verified_quotes": 2,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 11415,
+    "output_tokens": 1348
+  }
+}

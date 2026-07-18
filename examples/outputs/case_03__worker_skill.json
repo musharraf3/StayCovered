@@ -1,0 +1,289 @@
+{
+  "request_id": "case_03",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker+skill",
+  "mode": "live",
+  "decision": "action_needed",
+  "memo": "Member is 45, employed at 64 h/month warehouse work (pay stubs on hand), plus 8 h/month food pantry volunteering (volunteer log on hand). Total: 72 hours. Standard (REQ-80H): 80 hours minimum per month for adults 19\u201364 unless exempt. Shortfall: 8 hours. No exemption found.\n\nDeadline: 2026-08-12 (26 days remaining, not breached). Clock gate: pass.\n\nHours-and-proof gate: FAIL on hours only. Both claimed activities have accepted documents (pay stubs for employment, volunteer log for community service per DOC-WORK and DOC-VOLUNTEER). Evidence is complete. Hours are 8 short.\n\nPaths to close the gap (any qualifying mix per REQ-ACTIVITIES):\n1. Eight additional hours of paid work (document with pay stub, employer letter, or self-attestation + contact info per DOC-WORK).\n2. Eight additional hours of community service or volunteering with a qualifying organization (document with signed volunteer log or organization letter per DOC-VOLUNTEER).\n3. Enrollment in job training or workforce program for 8+ hours (enroll and obtain enrollment letter or attendance log per DOC-SCHOOL).\n4. Part-time school enrollment (enrollment letter or class schedule per DOC-SCHOOL).\n5. Any combination of work, service, school, or training hours.\n\nAction: Member should choose one or more of the above and gather the proof document before 2026-08-12. Envelope: current packet (pay stubs + volunteer log) PLUS the new proof. Member should respond by due date even if only one new document is ready; a note about what is coming is acceptable per DL-RESPOND.",
+  "member_impact": "Good news: you have 26 days to fix this.\n\nYou work 72 hours a month. The rule says you need 80. That is 8 hours short.\n\nYou have the right documents for your warehouse job and your food pantry hours. Those are good.\n\nTo reach 80, you can pick any of these:\n\n\u2014 Eight more hours at your warehouse job or another paid job. Bring pay stubs.\n\n\u2014 Eight more hours at the food pantry or another volunteer place. Get a signed note from them with the hours.\n\n\u2014 Sign up for a class or job-training program for 8 hours a week. Get an enrollment letter.\n\n\u2014 Any mix of the above.\n\nYou have until August 12, 2026 to send your answer. Send the documents you already have (your pay stubs and volunteer log) PLUS the new one. If it is not quite ready, send a note saying what is coming. Do not wait \u2014 responding now is much better than silence.\n\nYour envelope: pay stubs (warehouse 64 hours), volunteer log (food pantry 8 hours), and one more proof of 8+ more hours. Done.\n\nIf you have questions or get stuck, free help is available through a Medicaid navigator or legal aid in your area.",
+  "missing_documents": [
+    "Proof of 8 additional qualifying hours (pay stub, employer letter, self-attestation with employer contact, volunteer log, organization letter, enrollment letter, or attendance log)"
+  ],
+  "recommended_actions": [
+    "Choose one or more qualifying activities to reach 80+ hours: paid work, community service, job training, or school.",
+    "Gather proof for the new activity: pay stub (work), signed volunteer log or organization letter (service), enrollment letter or attendance log (training/school).",
+    "Respond by August 12, 2026 with the full packet: current pay stubs, current volunteer log, and new proof.",
+    "If new proof is not yet ready, respond by the deadline with a note saying what is coming and submit the document as soon as it arrives."
+  ],
+  "citations": [
+    {
+      "chunk_id": "REQ-80H",
+      "quote": "Adults age 19 to 64 covered through Medicaid expansion must complete at least 80 hours per month of qualifying activities, unless an exemption applies.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "quote": "Qualifying activities include working for pay (including self-employment), attending school or an education program at least half-time, participating in a job-training or workforce program, and performing community service or volunteering with a qualifying organization.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "quote": "Hours from different activities may be combined freely.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "quote": "Pay stubs covering the month are the cleanest proof of employment hours. If pay stubs are unavailable \u2014 cash pay, a small employer, lost records \u2014 an employer letter stating hours works, and where records genuinely cannot be produced, a self-attestation with the employer's contact information is accepted while the state verifies.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DOC-VOLUNTEER",
+      "quote": "Community service is proven with a volunteer log signed by the organization or a letter from it stating dates and hours.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DOC-SCHOOL",
+      "quote": "An enrollment letter or class schedule proves education hours; half-time enrollment or more satisfies the standard by itself in most months. Job-training and workforce programs are proven with a program enrollment letter or attendance log \u2014 the program office produces these routinely on request.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "quote": "Responding through any accepted channel by that date \u2014 with even a partial packet plus a note about what is coming \u2014 is far better than silence.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "info",
+      "detail": "26 days remain to respond (due 2026-08-12T23:59:00).",
+      "data": {
+        "days_remaining": 25.6
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "error",
+      "detail": "Qualifying hours: 72 per month (64h employment + 8h community_service) \u2014 8 hours SHORT of the 80-hour standard. Close the gap with any qualifying mix (work, school, job training, community service) or confirm an exemption before relying on hours.",
+      "data": {
+        "total": 72,
+        "shortfall": 8
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (2) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "renewal",
+    "received_at": "2026-07-12T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-08-12T23:59:00",
+    "hours_remaining": 615.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "REQ-80H",
+      "score": 8.554,
+      "matched_terms": [
+        "80",
+        "hour",
+        "standard"
+      ]
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "score": 6.622,
+      "matched_terms": [
+        "80",
+        "hour",
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "DOC-SCHOOL",
+      "score": 2.38,
+      "matched_terms": [
+        "standard"
+      ]
+    },
+    {
+      "chunk_id": "EX-ALIGN",
+      "score": 2.146,
+      "matched_terms": [
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "score": 13.52,
+      "matched_terms": [
+        "activities",
+        "community",
+        "employment",
+        "qualifying",
+        "service",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "DOC-VOLUNTEER",
+      "score": 8.905,
+      "matched_terms": [
+        "community",
+        "service",
+        "volunteer"
+      ]
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 4.307,
+      "matched_terms": [
+        "employment",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "DOC-SELF",
+      "score": 2.898,
+      "matched_terms": [
+        "employment"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 2.298,
+      "matched_terms": [
+        "documentation"
+      ]
+    },
+    {
+      "chunk_id": "REQ-SIXMONTH",
+      "score": 3.814,
+      "matched_terms": [
+        "community",
+        "volunteer"
+      ]
+    },
+    {
+      "chunk_id": "EX-MEDICAL",
+      "score": 4.432,
+      "matched_terms": [
+        "enrollment",
+        "program"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 10.224,
+      "matched_terms": [
+        "30",
+        "cure",
+        "day"
+      ]
+    },
+    {
+      "chunk_id": "DL-RECON",
+      "score": 4.603,
+      "matched_terms": [
+        "day",
+        "period"
+      ]
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "score": 2.633,
+      "matched_terms": [
+        "deadline"
+      ]
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "score": 2.41,
+      "matched_terms": [
+        "respond"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "renewal notice \u00b7 26 days remaining \u00b7 due 2026-08-12T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "3 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "80 hour standard requirement"
+      },
+      "result_digest": "query '80 hour standard requirement' \u2192 REQ-80H (8.554), EX-OVERVIEW (6.622), DOC-SCHOOL (2.38), EX-ALIGN (2.146)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "qualifying work activities employment community service volunteer"
+      },
+      "result_digest": "query 'qualifying work activities employment community service volunteer' \u2192 REQ-ACTIVITIES (13.52), DOC-VOLUNTEER (8.905), DOC-WORK (4.307), REQ-80H (4.256)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "pay stub documentation employment"
+      },
+      "result_digest": "query 'pay stub documentation employment' \u2192 DOC-WORK (4.805), REQ-ACTIVITIES (3.66), DOC-SELF (2.898), EX-INCARC (2.298)"
+    },
+    {
+      "step": 6,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "volunteer log community service documentation"
+      },
+      "result_digest": "query 'volunteer log community service documentation' \u2192 DOC-VOLUNTEER (11.237), REQ-SIXMONTH (3.814), REQ-ACTIVITIES (3.555), EX-INCARC (2.298)"
+    },
+    {
+      "step": 7,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "job training workforce program school enrollment"
+      },
+      "result_digest": "query 'job training workforce program school enrollment' \u2192 DOC-SCHOOL (16.429), REQ-ACTIVITIES (10.894), EX-MEDICAL (4.432), REQ-SIXMONTH (1.963)"
+    },
+    {
+      "step": 8,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "deadline respond by 30 day cure period"
+      },
+      "result_digest": "query 'deadline respond by 30 day cure period' \u2192 DL-CURE (10.224), DL-RECON (4.603), RT-HELP (2.633), DL-RESPOND (2.41)"
+    }
+  ],
+  "escalate": false,
+  "escalate_reason": null,
+  "policy_notes": [],
+  "model_decision": "action_needed",
+  "groundedness": {
+    "total_quotes": 7,
+    "verified_quotes": 7,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 18636,
+    "output_tokens": 2172
+  }
+}

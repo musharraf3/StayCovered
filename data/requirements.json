@@ -1,0 +1,30 @@
+{
+  "_note": "Plain-language summary of the federal Medicaid community-engagement (work) requirement as enacted in 2025 federal law, effective for expansion adults. Simplified for demonstration; a synthetic 'Demo State' stands in for state-specific choices. Not legal advice.",
+  "chunks": [
+    {
+      "id": "REQ-80H",
+      "title": "The 80-hour monthly standard",
+      "text": "Adults age 19 to 64 covered through Medicaid expansion must complete at least 80 hours per month of qualifying activities, unless an exemption applies. Any combination counts toward the total in the same month: the standard is the combined hours, not any single activity."
+    },
+    {
+      "id": "REQ-ACTIVITIES",
+      "title": "What counts as a qualifying activity",
+      "text": "Qualifying activities include working for pay (including self-employment), attending school or an education program at least half-time, participating in a job-training or workforce program, and performing community service or volunteering with a qualifying organization. Income from seasonal or irregular work can qualify by monthly average. Hours from different activities may be combined freely."
+    },
+    {
+      "id": "REQ-VERIFY",
+      "title": "The state must try to verify before asking you",
+      "text": "Before requiring an individual to submit anything, the state must attempt to verify compliance using data it already has — payroll data, program participation records, and other electronic sources. A person is only asked to prove hours or an exemption when data matching cannot confirm it. If you receive a request, it means the data did not settle it, not that you did something wrong."
+    },
+    {
+      "id": "REQ-SIXMONTH",
+      "title": "Renewals come every six months",
+      "text": "Eligibility for expansion adults is redetermined every six months. Each renewal can include a community-engagement check for at least one month in the period. Keeping proof as you go — pay stubs, enrollment letters, volunteer logs — turns each renewal from a scramble into an envelope."
+    },
+    {
+      "id": "REQ-DEMOSTATE",
+      "title": "Demo State reporting channels",
+      "text": "Demo State (synthetic) accepts reporting online through the member portal, by phone through the state help line, by mail using the form attached to the notice, and in person at a county office. If one channel fails or is unavailable to you, the others remain valid; keep a copy or a confirmation number for anything you submit."
+    }
+  ]
+}

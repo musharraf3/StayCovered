@@ -1,0 +1,37 @@
+{
+  "_note": "Which documents prove which activities. The 'facts' block drives the deterministic evidence check; the chunks are the citable prose. Simplified for demonstration.",
+  "facts": {
+    "employment": {"accepted_documents": ["pay_stubs", "employer_letter", "tax_record", "self_attestation_with_employer_contact"]},
+    "self_employment": {"accepted_documents": ["income_ledger", "tax_record", "client_invoices"]},
+    "education": {"accepted_documents": ["enrollment_letter", "class_schedule", "transcript"]},
+    "job_training": {"accepted_documents": ["program_enrollment_letter", "attendance_log"]},
+    "community_service": {"accepted_documents": ["volunteer_log", "organization_letter"]}
+  },
+  "chunks": [
+    {
+      "id": "DOC-WORK",
+      "title": "Proving work hours",
+      "text": "Pay stubs covering the month are the cleanest proof of employment hours. If pay stubs are unavailable — cash pay, a small employer, lost records — an employer letter stating hours works, and where records genuinely cannot be produced, a self-attestation with the employer's contact information is accepted while the state verifies. Cash work counts; undocumented does not mean unprovable."
+    },
+    {
+      "id": "DOC-SELF",
+      "title": "Proving self-employment",
+      "text": "Self-employment is proven with an income ledger, tax records, or client invoices. Hours may be computed from income at a reasonable rate when direct hour records are not kept. Keep a simple weekly log going forward — it becomes the easiest renewal you will ever do."
+    },
+    {
+      "id": "DOC-SCHOOL",
+      "title": "Proving school and training",
+      "text": "An enrollment letter or class schedule proves education hours; half-time enrollment or more satisfies the standard by itself in most months. Job-training and workforce programs are proven with a program enrollment letter or attendance log — the program office produces these routinely on request."
+    },
+    {
+      "id": "DOC-VOLUNTEER",
+      "title": "Proving community service",
+      "text": "Community service is proven with a volunteer log signed by the organization or a letter from it stating dates and hours. Ask the organization for the letter before the renewal month ends — a two-line letter is enough."
+    },
+    {
+      "id": "DOC-KEEP",
+      "title": "Keep copies of everything",
+      "text": "Keep a copy, photo, or confirmation number for every document you submit and every report you make. If the state's record and yours ever disagree, your copy with a date is what restores coverage quickly."
+    }
+  ]
+}

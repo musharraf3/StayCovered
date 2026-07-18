@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>StayCovered — case_05</title><style>
+:root{--ink:#1a202c;--sub:#5a6472;--line:#e2e8f0;--brand:#1d4e89;--brand-lt:#e8f0fa;
+--ok:#1a7f37;--ok-bg:#e8f5ec;--warn:#9a6700;--warn-bg:#fff8e5;--err:#b42318;--err-bg:#fdecea;
+--chip:#eef2f7;--trace:#102a43}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);
+background:#f5f7fa;padding:28px;line-height:1.55}
+.wrap{max-width:900px;margin:0 auto}
+header{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+header h1{font-size:26px;color:var(--brand)}
+header .tag{color:var(--sub);font-size:13px}
+.banner{border-radius:10px;padding:12px 16px;font-weight:700;margin:14px 0;font-size:15px}
+.banner.approve{background:var(--ok-bg);border:1.5px solid var(--ok);color:var(--ok)}
+.banner.request_documentation{background:var(--brand-lt);border:1.5px solid var(--brand);color:var(--brand)}
+.banner.denial_supported{background:var(--chip);border:1.5px solid var(--sub);color:var(--ink)}
+.banner.escalate_human{background:var(--warn-bg);border:1.5px solid var(--warn);color:var(--warn)}
+.clock{display:inline-block;font-family:Consolas,monospace;font-size:12.5px;padding:3px 10px;
+border-radius:999px;background:var(--chip)}
+.clock.breach{background:var(--err-bg);color:var(--err);font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;
+margin:14px 0;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.card h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--sub);
+margin-bottom:10px}
+.finding{border-left:4px solid;border-radius:6px;padding:10px 14px;margin:8px 0;font-size:14px}
+.finding.error{border-color:var(--err);background:var(--err-bg)}
+.finding.warning{border-color:var(--warn);background:var(--warn-bg)}
+.finding.info{border-color:var(--sub);background:var(--chip)}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;
+padding:2px 9px;border-radius:999px;text-transform:uppercase}
+.badge.code{background:var(--trace);color:#fff}
+.badge.err{background:var(--err-bg);color:var(--err)}
+.badge.ok{background:var(--ok-bg);color:var(--ok)}
+.trace{font-family:Consolas,monospace;font-size:12.5px}
+.trace .step{display:flex;gap:10px;padding:7px 10px;border-left:3px solid var(--brand);
+background:#fafbfc;border-radius:6px;margin:6px 0;align-items:baseline}
+.trace .n{color:#fff;background:var(--brand);border-radius:999px;min-width:20px;height:20px;
+display:inline-flex;align-items:center;justify-content:center;font-size:11px;flex:none}
+.trace .tool{color:var(--brand);font-weight:700}
+.trace .in{color:var(--sub)}
+.memo{font-size:14.5px;white-space:pre-wrap}
+.impact{background:var(--brand-lt);border:1px solid var(--brand);border-radius:8px;
+padding:10px 14px;font-size:14px;margin-top:10px}
+.cite{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:8px 12px;
+margin:8px 0 0;font-size:13.5px}
+.cite .src{color:var(--brand);font-weight:600}
+.cite .q{font-style:italic;color:var(--sub)}
+.retr{font-size:12.5px;color:var(--sub);margin-top:8px;font-family:Consolas,monospace}
+.retr .bar{display:inline-block;height:8px;background:var(--brand);border-radius:4px;
+vertical-align:middle;margin-right:6px}
+.actions li{margin:6px 0 6px 4px}
+.policy{background:var(--err-bg);border:1.5px solid var(--err);border-radius:10px;
+padding:12px 16px;margin:14px 0;font-size:13.5px}
+.policy b{color:var(--err)}
+.escalate{background:var(--warn-bg);border:1.5px solid var(--warn);color:var(--warn);
+border-radius:10px;padding:12px 16px;font-weight:600;margin:14px 0}
+footer{color:var(--sub);font-size:12.5px;margin-top:18px;border-top:1px solid var(--line);
+padding-top:12px}
+.gg{font-weight:600}
+</style></head><body><div class="wrap">
+<header><h1>StayCovered</h1><span class="tag">renewal preparation ·
+Demo State (SYNTHETIC) · claude-haiku-4-5-20251001 · arm: worker+skill</span></header>
+<div style="margin:6px 0 0"><span class="clock breach">noncompliance notice · respond by 2026-07-06T23:59:00 · DEADLINE PASSED — reconsideration window running</span></div>
+<div class="banner refer_navigator">SEE A NAVIGATOR — free human help, and this case needs it now</div>
+<div class="card"><h2>The notice</h2>
+<p><b>Coverage ending: renewal information not received</b> — SYNTHETIC MEMBER 0005,
+case SYN-MCD-0005</p>
+<p style="color:var(--sub);font-size:13.5px;margin-top:6px">38-year-old line cook who moved apartments in May; the renewal packet went to the old address and was never seen. Coverage terminated July 6 for a procedural reason. Works 92 hours a month and has pay stubs — eligibility was never actually in question.</p></div><div class="card"><h2>Renewal screening <span class="badge code">computed in code — not by AI</span></h2><div class="finding error"><b>deadline</b><div>The response deadline (2026-07-06T23:59:00) has passed. This is NOT the end: after a procedural termination there is a 90-day reconsideration window (running to about 2026-10-04) in which coverage can be restored without a brand-new application. Act now, with a navigator.</div></div><div class="finding info"><b>hours</b><div>Qualifying hours: 92 per month (92h employment) — meets the 80-hour standard.</div></div><div class="finding info"><b>evidence</b><div>Every claimed activity (1) has an accepted document on hand.</div></div></div><div class="card"><h2>Agent tool trace <span class="badge code">every step logged</span></h2><div class="trace"><div class="step"><span class="n">1</span><span><span class="tool">get_deadline</span><span class="in">()</span> → noncompliance notice · -11 days remaining · due 2026-07-06T23:59:00 · DEADLINE PASSED</span></div><div class="step"><span class="n">2</span><span><span class="tool">get_screening</span><span class="in">()</span> → 3 findings (1 error-level, 0 likely exemptions)</span></div><div class="step"><span class="n">3</span><span><span class="tool">lookup_rules</span><span class="in">({&quot;query&quot;: &quot;reconsideration window 90 days deadline passed appeal&quot;})</span> → query &#x27;reconsideration window 90 days deadline passed appeal&#x27; → DL-RECON (8.727), EX-INCARC (5.368), RT-HELP (5.266), DL-CURE (5.063)</span></div><div class="step"><span class="n">4</span><span><span class="tool">lookup_rules</span><span class="in">({&quot;query&quot;: &quot;coverage terminated procedural reason renewal noncompliance restore&quot;})</span> → query &#x27;coverage terminated procedural reason renewal noncompliance restore&#x27; → DL-RECON (10.733), REQ-SIXMONTH (2.186), DOC-VOLUNTEER (1.806), EX-PREGNANCY (1.793)</span></div></div></div><div class="card"><h2>Case notes (for the helper)</h2><div class="memo">Clock has breached: deadline (2026-07-06) passed 12 days ago (as of 2026-07-18). Coverage terminated for noncompliance—missing renewal paperwork (moved apartments, packet went to old address). However, this is a procedural termination, not a real eligibility problem. Screening confirms hours are met (92/month; standard is 80) and pay stubs are on hand. Per DL-RECON: &#x27;90-day reconsideration period after the termination date&#x27; allows the state to &#x27;reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed.&#x27; The member must act within the 90-day window (approximately 2026-10-04). This is NOT the end, but time is running and a navigator is needed to file the reconsideration request with the renewal packet and pay stubs. Per RT-HELP: &#x27;Certified navigators, community health workers, legal-aid offices, and the state Medicaid ombudsman help with renewals, exemptions, and hearings at no charge. For a passed deadline... a navigator or legal aid should be involved.&#x27;</div><div class="impact"><b>Letter to the member (plain language):</b> Good news: you can still fix this. Your coverage ended because the renewal letter went to your old address, not because you don&#x27;t qualify. You have about 12 weeks left (until early October) to send in the renewal paperwork and your pay stubs, and the state will restart your coverage back to July 6. You need help right now from a free Medicaid worker or navigator — they know how to file the request so the state sees it in time. Call your state Medicaid office or a community health center near you and tell them your coverage was terminated on July 6 for a late renewal. They will help you send in the papers.</div></div><div class="card"><h2>Citations — machine-verified</h2><div class="cite"><span class="src">[DL-RECON] The 90-day reconsideration window</span> <span class="badge ok">verified</span><div class="q">“If coverage is terminated for a procedural reason — missing paperwork, an unanswered notice — there is a 90-day reconsideration period after the termination date. Returning the renewal information within it lets the state reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed. Many people never learn this window exists.”</div></div><div class="cite"><span class="src">[RT-HELP] Free human help exists</span> <span class="badge ok">verified</span><div class="q">“Certified navigators, community health workers, legal-aid offices, and the state Medicaid ombudsman help with renewals, exemptions, and hearings at no charge. For a passed deadline, a denied exemption, conflicting records, or any notice that does not make sense, a navigator or legal aid should be involved — these are exactly the cases they exist for.”</div></div><div class="retr"><b>why these sources (retrieval scores):</b><div><span class="bar" style="width:70px"></span>DL-RECON · BM25 8.727 · matched: 90, reconsideration, window</div><div><span class="bar" style="width:43px"></span>EX-INCARC · BM25 5.368 · matched: 90, days</div><div><span class="bar" style="width:42px"></span>RT-HELP · BM25 5.266 · matched: deadline, passed</div><div><span class="bar" style="width:40px"></span>DL-CURE · BM25 5.063 · matched: days, window</div><div><span class="bar" style="width:17px"></span>REQ-SIXMONTH · BM25 2.186 · matched: renewal</div></div></div><div class="card"><h2>Recommended actions</h2><ol class="actions"><li>Contact a certified Medicaid navigator, community health worker, or legal-aid office immediately (free help exists per RT-HELP). Do NOT attempt to file alone once the deadline has passed.</li><li>Gather the complete renewal packet that was sent to the old address (or request a fresh copy from the state) and the pay stubs already on hand.</li><li>File the reconsideration request with the state Medicaid office within the 90-day window (by approximately 2026-10-04) citing the procedural termination and the 90-day reconsideration window (DL-RECON).</li><li>Include the pay stubs as proof that hours met the 80-hour standard (92 hours qualifying employment).</li></ol></div><div class="escalate">⚠ Free human help recommended: Deadline passed 12 days ago; coverage terminated; 90-day reconsideration window is running (approximately 11 weeks remaining). Member is eligible on the merits (hours met, documents on hand) but termination is procedural (missed renewal packet due to move). Free navigator help is required to file the reconsideration request correctly and within the window.</div><footer><span class="gg">Groundedness guard: 2/2 citations verified verbatim against chunks actually retrieved in this review.</span>
+The notice clock, screening, hours math, citation verification, and policy overrides are
+deterministic code — inspect them in the repo. StayCovered prepares people; it files
+nothing, decides nothing, and is not legal advice. All data on this page is synthetic.</footer>
+</div></body></html>

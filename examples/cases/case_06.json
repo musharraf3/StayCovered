@@ -1,0 +1,11 @@
+{
+  "request_id": "case_06",
+  "one_liner": "In substance-use treatment, zero reportable hours — exempt as medically frail",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0006", "member_id": "SYN-MCD-0006", "state": "Demo State (SYNTHETIC)", "age": 31, "in_sud_treatment": true},
+  "notice": {"type": "verification", "title": "Action needed: report your qualifying hours", "notice_date": "2026-07-11T00:00:00", "respond_by": "2026-08-10T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "31-year-old three months into an outpatient substance-use treatment program, not currently working. Received an hours notice and fears that answering honestly — zero hours — ends coverage, right when treatment depends on it.",
+  "activities": [],
+  "documents_on_hand": []
+}

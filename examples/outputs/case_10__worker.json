@@ -1,0 +1,213 @@
+{
+  "request_id": "case_10",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker",
+  "mode": "live",
+  "decision": "refer_navigator",
+  "memo": "Member is 47, caring for a 15-year-old, claims caretaker exemption. CRITICAL: Caretaker exemption covers age 13 or younger only (chunk EX-CARETAKER: 'dependent child age 13 or younger'). The 15-year-old does not qualify. Member has reported zero hours and has no documents on hand. Screening shows 80-hour shortfall and no supported exemption. Deadline is 2026-07-24 (6.6 days remaining). Member appears to have stopped reporting entirely, believing an exemption applies that does not apply to a 15-year-old. Two paths exist but both require immediate action: (1) if member qualifies for a different exemption (disability, pregnancy, SSI/SSDI, recent incarceration, or foster care history), gather proof documents now; (2) if no other exemption applies, member must report qualifying hours (work, school, job training, community service\u2014any combination totaling 80/month) with accepted proof by deadline. The gap between belief and rule, plus the imminent deadline and zero activity reporting, makes this a case where a navigator must clarify the rule in plain language and help the member identify what they have actually done in the past month.",
+  "member_impact": "Hello. We need to talk about your Medicaid renewal right away. You have until July 24 to send information \u2014 that is only 6 days away.\n\nYou said you are caring for your 15-year-old. That is important work. But the caretaker rule covers children age 13 and younger only. Your child is 15, so that rule does not apply to you.\n\nThis means you need to report 80 hours per month of other activities \u2014 like a job, school, volunteer work, or job training \u2014 and send proof of those hours. You have not reported any hours yet.\n\nYou have two options:\n\n**Option 1:** Do you have any other reason you might be exempt? For example, are you on disability benefits (SSI or SSDI), age 65 or older, a former foster youth under 26, pregnant, or were you recently released from jail or prison? If yes, tell us now and bring proof.\n\n**Option 2:** Did you do any work, school, volunteer, or training in the last month? If yes, we need to gather proof (pay stubs, school records, volunteer letters, etc.) and send it in right away.\n\nPlease call or come in today. We cannot wait until July 24.",
+  "missing_documents": [
+    "Proof of any qualifying activities (work, school, job training, community service) \u2014 at least 80 hours per month",
+    "OR proof of a different exemption (disability benefit award letter, birth certificate showing age 65+, foster-care documentation, pregnancy provider statement, incarceration release letter)"
+  ],
+  "recommended_actions": [
+    "Contact member immediately to clarify that caretaker exemption applies only to children age 13 or younger; the 15-year-old does not qualify.",
+    "Ask member about other possible exemptions: disability benefits (SSI/SSDI), age 65+, former foster youth under 26, pregnancy, recent incarceration release.",
+    "If no other exemption applies: ask member to detail all activities in the past month (employment, education, training, volunteering). Collect proof documents (pay stubs, school enrollment, volunteer letters, training certificates).",
+    "With proof in hand, submit response on behalf of member before 2026-07-24T23:59:00 to avoid non-compliance termination and loss of the 30-day cure window.",
+    "If deadline is missed, remind member of the 30-day cure window (after non-compliance notice) and 90-day reconsideration window (after termination)."
+  ],
+  "citations": [
+    {
+      "chunk_id": "EX-CARETAKER",
+      "quote": "A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "quote": "Adults age 19 to 64 covered through Medicaid expansion must complete at least 80 hours per month of qualifying activities, unless an exemption applies",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "quote": "Before coverage is ended for not meeting the community-engagement requirement, the state must send a non-compliance notice, and the person has 30 days to demonstrate compliance or an exemption",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-RECON",
+      "quote": "If coverage is terminated for a procedural reason \u2014 missing paperwork, an unanswered notice \u2014 there is a 90-day reconsideration period after the termination date",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "warning",
+      "detail": "Only 7 days remain to respond (due 2026-07-24T23:59:00). If more time is genuinely needed, the 30-day cure window after a non-compliance notice is a safety net \u2014 but do not plan on it.",
+      "data": {
+        "days_remaining": 6.6
+      }
+    },
+    {
+      "check": "exemption_unsupported",
+      "severity": "warning",
+      "detail": "The member believes the 'caretaker_young_child' exemption applies, but the facts on file do not show it. Do not rely on it without a navigator confirming \u2014 plan for the hours path in parallel.",
+      "data": null
+    },
+    {
+      "check": "hours",
+      "severity": "error",
+      "detail": "Qualifying hours: 0 per month (none reported) \u2014 80 hours SHORT of the 80-hour standard. Close the gap with any qualifying mix (work, school, job training, community service) or confirm an exemption before relying on hours.",
+      "data": {
+        "total": 0,
+        "shortfall": 80
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (0) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "verification",
+    "received_at": "2026-06-24T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-07-24T23:59:00",
+    "hours_remaining": 159.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "EX-CARETAKER",
+      "score": 8.508,
+      "matched_terms": [
+        "age",
+        "caretaker",
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "score": 3.959,
+      "matched_terms": [
+        "age",
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "score": 2.681,
+      "matched_terms": [
+        "age",
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 1.151,
+      "matched_terms": [
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-PREGNANCY",
+      "score": 2.249,
+      "matched_terms": [
+        "exemption",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 13.884,
+      "matched_terms": [
+        "compliance",
+        "cure",
+        "non",
+        "notice",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "DL-RECON",
+      "score": 8.207,
+      "matched_terms": [
+        "notice",
+        "period",
+        "reconsideration",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "RT-NOTICE",
+      "score": 3.745,
+      "matched_terms": [
+        "notice",
+        "reconsideration"
+      ]
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "score": 3.694,
+      "matched_terms": [
+        "notice",
+        "window"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "verification notice \u00b7 7 days remaining \u00b7 due 2026-07-24T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "4 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "caretaker exemption age limit children"
+      },
+      "result_digest": "query 'caretaker exemption age limit children' \u2192 EX-CARETAKER (8.508), EX-BENEFITS (3.959), REQ-80H (2.681), EX-INCARC (1.151)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "caretaker exemption dependent child 13 younger proof birth certificate"
+      },
+      "result_digest": "query 'caretaker exemption dependent child 13 younger proof birth certificate' \u2192 EX-CARETAKER (26.027), EX-BENEFITS (3.901), EX-INCARC (2.305), EX-PREGNANCY (2.249)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "non-compliance notice cure period reconsideration window deadline missed"
+      },
+      "result_digest": "query 'non-compliance notice cure period reconsideration window deadline missed' \u2192 DL-CURE (13.884), DL-RECON (8.207), RT-NOTICE (3.745), DL-RESPOND (3.694)"
+    }
+  ],
+  "escalate": true,
+  "escalate_reason": "Member's exemption belief is factually incompatible with the rule (15-year-old is outside the age 13 cutoff for caretaker exemption). Zero hours reported. Deadline in 6.6 days. Requires immediate navigator contact to correct the misunderstanding, explore other exemptions, and gather hours proof or exemption documentation before the response due date to avoid non-compliance termination.",
+  "policy_notes": [],
+  "model_decision": "refer_navigator",
+  "groundedness": {
+    "total_quotes": 4,
+    "verified_quotes": 4,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 11855,
+    "output_tokens": 1756
+  }
+}

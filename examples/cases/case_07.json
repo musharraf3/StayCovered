@@ -1,0 +1,13 @@
+{
+  "request_id": "case_07",
+  "one_liner": "Community-college student, enrolled more than half-time — school alone clears the bar",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0007", "member_id": "SYN-MCD-0007", "state": "Demo State (SYNTHETIC)", "age": 24},
+  "notice": {"type": "renewal", "title": "Six-month renewal: verify your work hours", "notice_date": "2026-07-14T00:00:00", "respond_by": "2026-08-15T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "24-year-old community-college student enrolled in 4 courses (more than half-time), roughly 88 hours a month of class and required coursework. Has the enrollment letter and class schedule. Worried school 'doesn't count like a job'.",
+  "activities": [
+    {"type": "education", "description": "community college, more than half-time", "monthly_hours": 88}
+  ],
+  "documents_on_hand": ["enrollment_letter", "class_schedule"]
+}

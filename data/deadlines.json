@@ -1,0 +1,25 @@
+{
+  "_note": "Deadline and window rules in plain language. Simplified for demonstration; not legal advice.",
+  "chunks": [
+    {
+      "id": "DL-RESPOND",
+      "title": "The response window on a notice",
+      "text": "A renewal or verification notice states a respond-by date. Responding through any accepted channel by that date — with even a partial packet plus a note about what is coming — is far better than silence. Silence is what turns a paperwork question into a termination."
+    },
+    {
+      "id": "DL-CURE",
+      "title": "The 30-day cure window",
+      "text": "Before coverage is ended for not meeting the community-engagement requirement, the state must send a non-compliance notice, and the person has 30 days to demonstrate compliance or an exemption. The cure window is a real second chance: hours from a new qualifying activity, or proof of an exemption, submitted within it prevents the termination."
+    },
+    {
+      "id": "DL-RECON",
+      "title": "The 90-day reconsideration window",
+      "text": "If coverage is terminated for a procedural reason — missing paperwork, an unanswered notice — there is a 90-day reconsideration period after the termination date. Returning the renewal information within it lets the state reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed. Many people never learn this window exists."
+    },
+    {
+      "id": "DL-HEARING",
+      "title": "Fair hearing rights",
+      "text": "A person who disagrees with a termination or an exemption denial can request a fair hearing, and a request made before the termination takes effect can keep coverage in place while the hearing is decided. The notice itself must explain how to request one."
+    }
+  ]
+}

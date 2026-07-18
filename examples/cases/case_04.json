@@ -1,0 +1,13 @@
+{
+  "request_id": "case_04",
+  "one_liner": "Paid in cash, 90 real hours, zero pay stubs — provable anyway",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0004", "member_id": "SYN-MCD-0004", "state": "Demo State (SYNTHETIC)", "age": 52},
+  "notice": {"type": "verification", "title": "Action needed: proof of employment hours", "notice_date": "2026-07-04T00:00:00", "respond_by": "2026-08-01T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "52-year-old house cleaner working about 90 hours a month for several families, paid in cash, no pay stubs. Believes the hours 'don't count' because there is no paperwork, and is close to giving up on the renewal.",
+  "activities": [
+    {"type": "employment", "description": "house cleaning for private clients, cash pay", "monthly_hours": 90}
+  ],
+  "documents_on_hand": []
+}

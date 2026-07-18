@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>StayCovered — case_04</title><style>
+:root{--ink:#1a202c;--sub:#5a6472;--line:#e2e8f0;--brand:#1d4e89;--brand-lt:#e8f0fa;
+--ok:#1a7f37;--ok-bg:#e8f5ec;--warn:#9a6700;--warn-bg:#fff8e5;--err:#b42318;--err-bg:#fdecea;
+--chip:#eef2f7;--trace:#102a43}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);
+background:#f5f7fa;padding:28px;line-height:1.55}
+.wrap{max-width:900px;margin:0 auto}
+header{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+header h1{font-size:26px;color:var(--brand)}
+header .tag{color:var(--sub);font-size:13px}
+.banner{border-radius:10px;padding:12px 16px;font-weight:700;margin:14px 0;font-size:15px}
+.banner.approve{background:var(--ok-bg);border:1.5px solid var(--ok);color:var(--ok)}
+.banner.request_documentation{background:var(--brand-lt);border:1.5px solid var(--brand);color:var(--brand)}
+.banner.denial_supported{background:var(--chip);border:1.5px solid var(--sub);color:var(--ink)}
+.banner.escalate_human{background:var(--warn-bg);border:1.5px solid var(--warn);color:var(--warn)}
+.clock{display:inline-block;font-family:Consolas,monospace;font-size:12.5px;padding:3px 10px;
+border-radius:999px;background:var(--chip)}
+.clock.breach{background:var(--err-bg);color:var(--err);font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;
+margin:14px 0;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.card h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--sub);
+margin-bottom:10px}
+.finding{border-left:4px solid;border-radius:6px;padding:10px 14px;margin:8px 0;font-size:14px}
+.finding.error{border-color:var(--err);background:var(--err-bg)}
+.finding.warning{border-color:var(--warn);background:var(--warn-bg)}
+.finding.info{border-color:var(--sub);background:var(--chip)}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;
+padding:2px 9px;border-radius:999px;text-transform:uppercase}
+.badge.code{background:var(--trace);color:#fff}
+.badge.err{background:var(--err-bg);color:var(--err)}
+.badge.ok{background:var(--ok-bg);color:var(--ok)}
+.trace{font-family:Consolas,monospace;font-size:12.5px}
+.trace .step{display:flex;gap:10px;padding:7px 10px;border-left:3px solid var(--brand);
+background:#fafbfc;border-radius:6px;margin:6px 0;align-items:baseline}
+.trace .n{color:#fff;background:var(--brand);border-radius:999px;min-width:20px;height:20px;
+display:inline-flex;align-items:center;justify-content:center;font-size:11px;flex:none}
+.trace .tool{color:var(--brand);font-weight:700}
+.trace .in{color:var(--sub)}
+.memo{font-size:14.5px;white-space:pre-wrap}
+.impact{background:var(--brand-lt);border:1px solid var(--brand);border-radius:8px;
+padding:10px 14px;font-size:14px;margin-top:10px}
+.cite{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:8px 12px;
+margin:8px 0 0;font-size:13.5px}
+.cite .src{color:var(--brand);font-weight:600}
+.cite .q{font-style:italic;color:var(--sub)}
+.retr{font-size:12.5px;color:var(--sub);margin-top:8px;font-family:Consolas,monospace}
+.retr .bar{display:inline-block;height:8px;background:var(--brand);border-radius:4px;
+vertical-align:middle;margin-right:6px}
+.actions li{margin:6px 0 6px 4px}
+.policy{background:var(--err-bg);border:1.5px solid var(--err);border-radius:10px;
+padding:12px 16px;margin:14px 0;font-size:13.5px}
+.policy b{color:var(--err)}
+.escalate{background:var(--warn-bg);border:1.5px solid var(--warn);color:var(--warn);
+border-radius:10px;padding:12px 16px;font-weight:600;margin:14px 0}
+footer{color:var(--sub);font-size:12.5px;margin-top:18px;border-top:1px solid var(--line);
+padding-top:12px}
+.gg{font-weight:600}
+</style></head><body><div class="wrap">
+<header><h1>StayCovered</h1><span class="tag">renewal preparation ·
+Demo State (SYNTHETIC) · claude-haiku-4-5-20251001 · arm: worker+skill</span></header>
+<div style="margin:6px 0 0"><span class="clock">verification notice · respond by 2026-08-01T23:59:00 · 15 days remaining</span></div>
+<div class="banner action_needed">ACTION NEEDED — specific gaps, specific steps, a real deadline</div>
+<div class="card"><h2>The notice</h2>
+<p><b>Action needed: proof of employment hours</b> — SYNTHETIC MEMBER 0004,
+case SYN-MCD-0004</p>
+<p style="color:var(--sub);font-size:13.5px;margin-top:6px">52-year-old house cleaner working about 90 hours a month for several families, paid in cash, no pay stubs. Believes the hours &#x27;don&#x27;t count&#x27; because there is no paperwork, and is close to giving up on the renewal.</p></div><div class="card"><h2>Renewal screening <span class="badge code">computed in code — not by AI</span></h2><div class="finding info"><b>deadline</b><div>15 days remain to respond (due 2026-08-01T23:59:00).</div></div><div class="finding info"><b>hours</b><div>Qualifying hours: 90 per month (90h employment) — meets the 80-hour standard.</div></div><div class="finding error"><b>evidence</b><div>1 claimed activity is missing proof — employment: need one of pay_stubs, employer_letter, tax_record, self_attestation_with_employer_contact. Hours that cannot be evidenced do not count when the state verifies.</div></div></div><div class="card"><h2>Agent tool trace <span class="badge code">every step logged</span></h2><div class="trace"><div class="step"><span class="n">1</span><span><span class="tool">get_deadline</span><span class="in">()</span> → verification notice · 15 days remaining · due 2026-08-01T23:59:00</span></div><div class="step"><span class="n">2</span><span><span class="tool">get_screening</span><span class="in">()</span> → 3 findings (1 error-level, 0 likely exemptions)</span></div><div class="step"><span class="n">3</span><span><span class="tool">lookup_rules</span><span class="in">({&quot;query&quot;: &quot;cash work informal employment self-attestation employer letter documentation&quot;})</span> → query &#x27;cash work informal employment self-attestation employer letter documentation&#x27; → DOC-WORK (17.878), DOC-SELF (5.795), REQ-ACTIVITIES (5.49), EX-BENEFITS (3.402)</span></div><div class="step"><span class="n">4</span><span><span class="tool">lookup_rules</span><span class="in">({&quot;query&quot;: &quot;accepted documents proof of work hours employment verification&quot;})</span> → query &#x27;accepted documents proof of work hours employment verification&#x27; → DOC-WORK (7.763), REQ-ACTIVITIES (4.488), DL-RESPOND (4.362), DOC-SELF (3.819)</span></div></div></div><div class="card"><h2>Case notes (for the helper)</h2><div class="memo">Clock: 15 days remaining (due 2026-08-01). Exemption: none apply. Hours: 90/month meets the 80-hour standard. CRITICAL ISSUE: The member believes cash work &#x27;doesn&#x27;t count&#x27; because there are no pay stubs. This is incorrect. Screening shows missing proof for the employment claim. SOLUTION: The rulebook (DOC-WORK) explicitly states &#x27;Cash work counts; undocumented does not mean unprovable.&#x27; Four paths to proof exist: (1) pay stubs if any are available, (2) employer letter from one or more clients, (3) tax record (1099, Schedule C), or (4) self-attestation with the employer&#x27;s (client&#x27;s) contact information. The self-attestation path is explicitly accepted &#x27;where records genuinely cannot be produced.&#x27; Member has strong case if any ONE of these documents can be obtained. Recommend: (1) contact the families she cleans for and request a brief signed letter stating hours worked in the past month or past 30 days (most likely path); or (2) if the families cannot or will not provide a letter, write a one-paragraph statement saying how many hours she works each week, the names of the clients (her employers), and provide at least one client&#x27;s phone number so the state can verify. Attach the letter or statement to the application. Do not delay — respond by 2026-08-01.</div><div class="impact"><b>Letter to the member (plain language):</b> Good news: your 90 hours a month is more than enough, and cash work DOES count, even without pay stubs. Here is what you need to do: Ask one or more of the families you clean for to write a short letter saying how many hours you work for them each month. It can be just a few sentences. If they will not write a letter, you can write one yourself saying how many hours you work each week and give the names and phone number of at least one family so the state can call and check. Send this letter with your renewal by August 1, 2026. That is the only thing missing. You have this.</div></div><div class="card"><h2>Proof still needed <span class="badge code">authoritative list from code</span></h2><ul class="actions"><li>employment: need one of pay_stubs, employer_letter, tax_record, self_attestation_with_employer_contact</li></ul></div><div class="card"><h2>Citations — machine-verified</h2><div class="cite"><span class="src">[DOC-WORK] Proving work hours</span> <span class="badge ok">verified</span><div class="q">“Pay stubs covering the month are the cleanest proof of employment hours. If pay stubs are unavailable — cash pay, a small employer, lost records — an employer letter stating hours works, and where records genuinely cannot be produced, a self-attestation with the employer&#x27;s contact information is accepted while the state verifies. Cash work counts; undocumented does not mean unprovable.”</div></div><div class="cite"><span class="src">[REQ-ACTIVITIES] What counts as a qualifying activity</span> <span class="badge ok">verified</span><div class="q">“Qualifying activities include working for pay (including self-employment), attending school or an education program at least half-time, participating in a job-training or workforce program, and performing community service or volunteering with a qualifying organization.”</div></div><div class="cite"><span class="src">[DL-RESPOND] The response window on a notice</span> <span class="badge ok">verified</span><div class="q">“A renewal or verification notice states a respond-by date. Responding through any accepted channel by that date — with even a partial packet plus a note about what is coming — is far better than silence. Silence is what turns a paperwork question into a termination.”</div></div><div class="retr"><b>why these sources (retrieval scores):</b><div><span class="bar" style="width:70px"></span>DOC-WORK · BM25 17.878 · matched: attestation, cash, employer, employment, letter, self</div><div><span class="bar" style="width:22px"></span>DOC-SELF · BM25 5.795 · matched: employment, self</div><div><span class="bar" style="width:21px"></span>REQ-ACTIVITIES · BM25 5.49 · matched: employment, self, work</div><div><span class="bar" style="width:17px"></span>DL-RESPOND · BM25 4.362 · matched: accepted, verification</div><div><span class="bar" style="width:13px"></span>EX-BENEFITS · BM25 3.402 · matched: documentation, letter</div></div></div><div class="card"><h2>Recommended actions</h2><ol class="actions"><li>Contact the families she cleans for and request a brief letter stating monthly hours worked. (Easiest and fastest.)</li><li>Alternatively: write a one-paragraph self-attestation stating weekly hours, names of clients, and phone number of at least one client for state verification.</li><li>Assemble the chosen proof document and the employment details into the renewal packet.</li><li>Submit by the respond-by date of 2026-08-01 through any accepted channel (mail, phone, online portal if available).</li></ol></div><footer><span class="gg">Groundedness guard: 3/3 citations verified verbatim against chunks actually retrieved in this review.</span>
+The notice clock, screening, hours math, citation verification, and policy overrides are
+deterministic code — inspect them in the repo. StayCovered prepares people; it files
+nothing, decides nothing, and is not legal advice. All data on this page is synthetic.</footer>
+</div></body></html>

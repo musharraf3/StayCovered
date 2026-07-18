@@ -1,0 +1,14 @@
+{
+  "request_id": "case_03",
+  "one_liner": "72 of 80 hours — eight short, with clear ways to close the gap",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0003", "member_id": "SYN-MCD-0003", "state": "Demo State (SYNTHETIC)", "age": 45},
+  "notice": {"type": "renewal", "title": "Six-month renewal: verify your work hours", "notice_date": "2026-07-12T00:00:00", "respond_by": "2026-08-12T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "45-year-old warehouse worker whose hours were cut: 64 hours a month now, plus 8 hours a month volunteering at a food pantry. Total 72 — eight hours short of the standard. Has pay stubs and a signed volunteer log.",
+  "activities": [
+    {"type": "employment", "description": "warehouse, reduced schedule", "monthly_hours": 64},
+    {"type": "community_service", "description": "food pantry", "monthly_hours": 8}
+  ],
+  "documents_on_hand": ["pay_stubs", "volunteer_log"]
+}

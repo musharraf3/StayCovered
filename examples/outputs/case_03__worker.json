@@ -1,0 +1,222 @@
+{
+  "request_id": "case_03",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker",
+  "mode": "live",
+  "decision": "action_needed",
+  "memo": "Member: SYN-MCD-0003 (45 y/o, warehouse worker). Notice: Six-month renewal, respond by 2026-08-12 (25 days remaining). Screening: 72 hours/month (64h employment + 8h community service) = 8 hours SHORT of 80-hour standard. Both documents on hand and accepted (pay stubs for employment, signed volunteer log for community service). Exemptions checked: none apparent from case file (no mention of caregiver status, disability benefits, medical frailty, recent incarceration, or age 65+). Path forward: member must close 8-hour gap or claim/prove an exemption. Options: (1) Add 8+ more hours of any qualifying activity (work, school, job training, or community service) in the renewal month; (2) Confirm caretaker status (child \u226413 or disabled dependent) with birth certificate or care documentation; (3) Verify disability benefits (SSI/SSDI award letter) or medically frail status (provider letter). Strong deadline compliance: 26 days remain. All supporting documents for current activities are in place and meet standard. No barriers flagged.",
+  "member_impact": "Good news: your work and volunteer hours are documented and accepted. You're 8 hours short of the 80-hour requirement this month. Here's what you can do right away:\n\n**Close the gap in the next 3 weeks:**\n\u2022 Ask your warehouse employer for 8 extra hours of work, or\n\u2022 Add 8 more hours at the food pantry or another qualifying volunteer position, or\n\u2022 Start a job-training or school program for 8+ hours, or\n\u2022 Tell us if you're caring for a child age 13 or younger, or a disabled family member \u2014 that might exempt you entirely.\n\n**You have until August 12, 2026 to respond.** That's 25 days from today.\n\n**What to gather now:**\n\u2022 Your current pay stubs (you have these)\n\u2022 Your volunteer log signed by the food pantry (you have this)\n\u2022 If you add more hours: new pay stubs, volunteer log, or training records\n\u2022 If you're a caregiver: child's birth certificate, benefits letter, or care paperwork\n\nWe're here to help. Bring everything you gather to your next visit, and we'll make sure it's submitted in time.",
+  "missing_documents": [],
+  "recommended_actions": [
+    "Confirm whether member is caretaker of dependent child (\u226413) or person with disability \u2014 if so, gather proof document (birth certificate, benefits record, or care documentation) per EX-CARETAKER",
+    "Ask member's employer for 8+ additional work hours during the renewal period, or request written confirmation of reduced schedule so hours can be credited prospectively",
+    "Explore expansion of food pantry volunteering or other qualifying community service for 8+ hours per month",
+    "If member becomes newly employed or enrolled in training/school, obtain documentation within renewal month",
+    "Schedule follow-up visit 3\u20135 days before the 2026-08-12 deadline to review all documents and finalize submission"
+  ],
+  "citations": [
+    {
+      "chunk_id": "REQ-80H",
+      "quote": "Adults age 19 to 64 covered through Medicaid expansion must complete at least 80 hours per month of qualifying activities, unless an exemption applies.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "quote": "Qualifying activities include working for pay (including self-employment), attending school or an education program at least half-time, participating in a job-training or workforce program, and performing community service or volunteering with a qualifying organization. Hours from different activities may be combined freely.",
+      "verified": false
+    },
+    {
+      "chunk_id": "DOC-VOLUNTEER",
+      "quote": "Community service is proven with a volunteer log signed by the organization or a letter from it stating dates and hours.",
+      "verified": true
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "quote": "If an exemption applies, the 80-hour requirement does not apply to you at all, and reporting hours is unnecessary. Always check exemptions before counting hours.",
+      "verified": true
+    },
+    {
+      "chunk_id": "EX-CARETAKER",
+      "quote": "A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt, as is a caretaker of a person with a disability. Proof is simple: the child's birth certificate, a benefits record showing the child's age, or documentation of the care relationship.",
+      "verified": true
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "quote": "People receiving SSI or SSDI disability benefits are exempt, as are people age 65 and older (who generally qualify through other pathways) and former foster youth under age 26.",
+      "verified": true
+    },
+    {
+      "chunk_id": "EX-MEDICAL",
+      "quote": "People who are medically frail are exempt, including those with disabling mental health or substance-use conditions, serious or complex medical conditions, and people receiving treatment in a substance-use disorder program.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "info",
+      "detail": "26 days remain to respond (due 2026-08-12T23:59:00).",
+      "data": {
+        "days_remaining": 25.6
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "error",
+      "detail": "Qualifying hours: 72 per month (64h employment + 8h community_service) \u2014 8 hours SHORT of the 80-hour standard. Close the gap with any qualifying mix (work, school, job training, community service) or confirm an exemption before relying on hours.",
+      "data": {
+        "total": 72,
+        "shortfall": 8
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (2) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "renewal",
+    "received_at": "2026-07-12T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-08-12T23:59:00",
+    "hours_remaining": 615.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DOC-VOLUNTEER",
+      "score": 8.905,
+      "matched_terms": [
+        "community",
+        "service",
+        "volunteer"
+      ]
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "score": 7.699,
+      "matched_terms": [
+        "80",
+        "exemption",
+        "hour",
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "score": 5.976,
+      "matched_terms": [
+        "80",
+        "exemption",
+        "hour"
+      ]
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "score": 5.385,
+      "matched_terms": [
+        "community",
+        "service",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "EX-CARETAKER",
+      "score": 16.709,
+      "matched_terms": [
+        "caretaker",
+        "child",
+        "dependent",
+        "exemption",
+        "parent"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 1.151,
+      "matched_terms": [
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 1.022,
+      "matched_terms": [
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "score": 3.939,
+      "matched_terms": [
+        "disability",
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-MEDICAL",
+      "score": 3.51,
+      "matched_terms": [
+        "exemption",
+        "medical"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "renewal notice \u00b7 26 days remaining \u00b7 due 2026-08-12T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "3 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "80-hour work requirement community service volunteer exemption documentation"
+      },
+      "result_digest": "query '80-hour work requirement community service volunteer exemption documentation' \u2192 DOC-VOLUNTEER (8.905), EX-OVERVIEW (7.699), REQ-80H (5.976), REQ-ACTIVITIES (5.385)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "caretaker exemption parent child dependent"
+      },
+      "result_digest": "query 'caretaker exemption parent child dependent' \u2192 EX-CARETAKER (16.709), EX-INCARC (1.151), EX-OVERVIEW (1.078), DL-CURE (1.022)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "disability exemption medical hardship barrier"
+      },
+      "result_digest": "query 'disability exemption medical hardship barrier' \u2192 EX-BENEFITS (3.939), EX-MEDICAL (3.51), EX-CARETAKER (3.164), EX-INCARC (1.151)"
+    }
+  ],
+  "escalate": false,
+  "escalate_reason": null,
+  "policy_notes": [],
+  "model_decision": "action_needed",
+  "groundedness": {
+    "total_quotes": 7,
+    "verified_quotes": 6,
+    "unverified": [
+      "[REQ-ACTIVITIES] (quote not found in cited chunk) \u201cQualifying activities include working for pay (including self-employment), attending school or an education program at least half-time, participating in a job-training or workforce program, and performing community service or volunteering with a qualifying organization. Hours from different activities may be combined freely.\u201d"
+    ]
+  },
+  "usage": {
+    "input_tokens": 8211,
+    "output_tokens": 1523
+  }
+}

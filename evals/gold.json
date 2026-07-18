@@ -1,0 +1,73 @@
+{
+  "_note": "Gold labels for the 10 synthetic renewal cases. 'decision' is an accept-list scored against the MODEL'S raw decision (before code policy overrides). 'expected_flags' are error-level findings deterministic code must produce (identical across arms). 'expected_escalate' = should this end in a human referral.",
+  "case_01": {
+    "decision": ["ready_to_submit"],
+    "must_mention": [["pay stub"], ["80"], ["ready", "complete", "all set", "everything you need"]],
+    "expected_flags": [],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_02": {
+    "decision": ["likely_exempt"],
+    "must_mention": [["caretaker", "child"], ["exempt"], ["birth certificate", "benefits record"]],
+    "expected_flags": ["hours"],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_03": {
+    "decision": ["action_needed"],
+    "must_mention": [["8 hours", "eight hours", "8 more"], ["volunteer", "community service", "training", "school"], ["due", "deadline", "august"]],
+    "expected_flags": ["hours"],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_04": {
+    "decision": ["action_needed"],
+    "must_mention": [["cash"], ["employer letter", "self-attestation", "attestation", "ledger"], ["count"]],
+    "expected_flags": ["evidence"],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_05": {
+    "decision": ["refer_navigator"],
+    "must_mention": [["90-day", "90 day", "reconsideration"], ["navigator", "legal aid", "free help", "ombudsman"], ["restore", "reopen", "back to", "without a new application", "not the end"]],
+    "expected_flags": ["deadline"],
+    "expected_escalate": true,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_06": {
+    "decision": ["likely_exempt"],
+    "must_mention": [["treatment", "medically frail"], ["exempt"], ["provider", "program", "letter"]],
+    "expected_flags": ["hours"],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_07": {
+    "decision": ["ready_to_submit"],
+    "must_mention": [["enrollment", "enrolled", "school", "college"], ["half-time", "half time"], ["ready", "complete", "counts"]],
+    "expected_flags": [],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_08": {
+    "decision": ["likely_exempt"],
+    "must_mention": [["SNAP"], ["deemed", "already meeting", "one set", "counts here too", "count here too"], ["case number"]],
+    "expected_flags": ["hours"],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_09": {
+    "decision": ["ready_to_submit"],
+    "must_mention": [["phone", "mail", "in person", "county office"], ["confirmation", "copy"], ["5 days", "five days", "july 23"]],
+    "expected_flags": [],
+    "expected_escalate": false,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  },
+  "case_10": {
+    "decision": ["refer_navigator"],
+    "must_mention": [["13", "age"], ["navigator", "legal aid", "free help"], ["hours", "both paths", "in parallel", "as well"]],
+    "expected_flags": ["hours"],
+    "expected_escalate": true,
+    "required_tools": ["lookup_rules", "get_screening", "get_deadline"]
+  }
+}

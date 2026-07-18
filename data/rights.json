@@ -1,0 +1,25 @@
+{
+  "_note": "Member rights and free help, in plain language. Simplified for demonstration; not legal advice.",
+  "chunks": [
+    {
+      "id": "RT-NOTICE",
+      "title": "Notices must be understandable and delivered",
+      "text": "The state must send written notice before taking action on coverage, in language the person can understand, with enough time to respond. If mail has been returned, the state must attempt other contact methods. A person who never effectively received a notice has strong grounds in reconsideration and fair hearing."
+    },
+    {
+      "id": "RT-LANGUAGE",
+      "title": "Free language help",
+      "text": "Free interpretation and translated materials are a right, not a favor. A person with limited English can ask for an interpreter on the state help line and for translated notices; deadlines do not shrink because language help was needed."
+    },
+    {
+      "id": "RT-HELP",
+      "title": "Free human help exists",
+      "text": "Certified navigators, community health workers, legal-aid offices, and the state Medicaid ombudsman help with renewals, exemptions, and hearings at no charge. For a passed deadline, a denied exemption, conflicting records, or any notice that does not make sense, a navigator or legal aid should be involved — these are exactly the cases they exist for."
+    },
+    {
+      "id": "RT-NOADVICE",
+      "title": "What preparation tools can and cannot do",
+      "text": "A preparation tool can explain a notice, screen for likely exemptions, add up hours, and build a document checklist. It cannot file anything with the state, cannot guarantee an outcome, and is not legal advice. The state agency's own determination, and the appeal rights that come with it, always govern."
+    }
+  ]
+}

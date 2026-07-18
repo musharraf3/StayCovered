@@ -1,0 +1,40 @@
+{
+  "_note": "Plain-language federal-floor exemption catalog. Simplified for demonstration; not legal advice.",
+  "chunks": [
+    {
+      "id": "EX-OVERVIEW",
+      "title": "Exemptions come first",
+      "text": "If an exemption applies, the 80-hour requirement does not apply to you at all, and reporting hours is unnecessary. Always check exemptions before counting hours. An exemption claim needs its proof document, and the state must accept reasonable evidence."
+    },
+    {
+      "id": "EX-CARETAKER",
+      "title": "Exemption: caretaker of a young child or disabled person",
+      "text": "A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt, as is a caretaker of a person with a disability. Proof is simple: the child's birth certificate, a benefits record showing the child's age, or documentation of the care relationship."
+    },
+    {
+      "id": "EX-MEDICAL",
+      "title": "Exemption: medically frail and related conditions",
+      "text": "People who are medically frail are exempt, including those with disabling mental health or substance-use conditions, serious or complex medical conditions, and people receiving treatment in a substance-use disorder program. A letter from a treating provider or program documenting the condition or enrollment is accepted proof."
+    },
+    {
+      "id": "EX-PREGNANCY",
+      "title": "Exemption: pregnancy and postpartum",
+      "text": "A person who is pregnant or in the postpartum coverage period is exempt. A provider statement confirming pregnancy or the delivery date is accepted proof."
+    },
+    {
+      "id": "EX-BENEFITS",
+      "title": "Exemption: disability benefits, age, and foster history",
+      "text": "People receiving SSI or SSDI disability benefits are exempt, as are people age 65 and older (who generally qualify through other pathways) and former foster youth under age 26. The award letter, date of birth on the case record, or foster-care documentation is accepted proof."
+    },
+    {
+      "id": "EX-ALIGN",
+      "title": "Exemption: already meeting SNAP or TANF requirements",
+      "text": "A person who is complying with the work requirements of SNAP or TANF is deemed to comply with the Medicaid requirement — one set of rules, not two. The SNAP or TANF case number is sufficient for the state to confirm by data match."
+    },
+    {
+      "id": "EX-INCARC",
+      "title": "Exemption: recent release from incarceration",
+      "text": "A person released from incarceration within the past 90 days is exempt for that period. Release documentation is accepted proof; the exemption exists precisely because re-entry is when paperwork is hardest."
+    }
+  ]
+}

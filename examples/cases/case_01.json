@@ -1,0 +1,14 @@
+{
+  "request_id": "case_01",
+  "one_liner": "Two part-time jobs, 96 hours, pay stubs in hand — ready to submit",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0001", "member_id": "SYN-MCD-0001", "state": "Demo State (SYNTHETIC)", "age": 34},
+  "notice": {"type": "renewal", "title": "Six-month renewal: verify your work hours", "notice_date": "2026-07-10T00:00:00", "respond_by": "2026-08-08T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "34-year-old working two part-time jobs: 64 hours a month stocking at a grocery store and 32 hours a month at a gas station. Data matching could not confirm the second job, so the state asked for proof. Has current pay stubs from both employers.",
+  "activities": [
+    {"type": "employment", "description": "grocery store, part-time", "monthly_hours": 64},
+    {"type": "employment", "description": "gas station, part-time", "monthly_hours": 32}
+  ],
+  "documents_on_hand": ["pay_stubs"]
+}

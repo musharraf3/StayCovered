@@ -1,0 +1,13 @@
+{
+  "request_id": "case_02",
+  "one_liner": "Single parent of a 6- and a 9-year-old, worried about being 40 hours short — actually exempt",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0002", "member_id": "SYN-MCD-0002", "state": "Demo State (SYNTHETIC)", "age": 29, "dependent_children_ages": [6, 9]},
+  "notice": {"type": "verification", "title": "Action needed: report your qualifying hours", "notice_date": "2026-07-08T00:00:00", "respond_by": "2026-08-05T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "29-year-old single parent of two children, ages 6 and 9, working about 40 hours a month cleaning offices. Received an hours-reporting notice and is frightened of losing coverage because 40 is less than 80. Does not know the caretaker exemption exists.",
+  "activities": [
+    {"type": "employment", "description": "office cleaning, part-time", "monthly_hours": 40}
+  ],
+  "documents_on_hand": ["pay_stubs"]
+}

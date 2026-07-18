@@ -1,0 +1,170 @@
+{
+  "request_id": "case_05",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker",
+  "mode": "live",
+  "decision": "refer_navigator",
+  "memo": "CASE 05 ANALYSIS:\n\n**DEADLINE STATUS:** Noncompliance response deadline (2026-07-06) passed 12 days ago; coverage terminated July 6, 2026. However, the 90-day reconsideration window (DL-RECON) is NOW ACTIVE and runs to approximately 2026-10-04. This is critical: a procedural termination (missing paperwork due to mail not reaching new address) triggers a distinct right to reopen without a new application if eligibility is confirmed within the window.\n\n**HOURS:** Member works 92 hours/month as a line cook\u2014exceeds 80-hour standard. Meets requirement on the merits.\n\n**EVIDENCE:** Pay stubs on hand document employment. Complete.\n\n**FACTUAL ISSUE:** Notice was mailed to old address; member never received it. This strengthens reconsideration grounds (RT-NOTICE: \"If mail has been returned, the state must attempt other contact methods. A person who never effectively received a notice has strong grounds in reconsideration and fair hearing\").\n\n**DECISION:** Refer to navigator. Three reasons:\n1. Deadline is past; this is not a standard \"action before due date\" scenario\u2014it is a post-termination reconsideration with distinct procedural rights.\n2. The address-change fact pattern (mail returned, never received) may support not just reconsideration but a fair-hearing argument under RT-NOTICE.\n3. Navigators have direct contact with state systems to file reconsideration requests and can advise on fair-hearing preservation if needed (DL-HEARING).\n\nMember is otherwise compliant (hours met, documents ready). This is a procedural fix, not a compliance failure.",
+  "member_impact": "**GOOD NEWS:** Your job is solid\u2014you work 92 hours a month, and you have your pay stubs. You DID meet the work hours.\n\n**WHAT HAPPENED:** The state sent you a renewal form to your old address. It never reached you. Your coverage stopped on July 6 because you didn't send anything back.\n\n**YOU STILL HAVE TIME:** This is important: when coverage stops because of a missing form (not because you don't qualify), you have 90 days from July 6 to fix it. That deadline is around October 4, 2026. If you send in your information by then, the state can put your coverage BACK ON starting from July 6\u2014you won't lose those 12 days.\n\n**WHAT TO DO RIGHT NOW:**\n- Get in touch with a community navigator right away. This is a special situation and navigators know how to restart coverage quickly.\n- Have your pay stubs ready to show you're working.\n- Tell the navigator that your old address is why the form never came to you.\n\nYou didn't do anything wrong. The form got lost in the mail. With help from a navigator, this can be fixed.",
+  "missing_documents": [],
+  "recommended_actions": [
+    "Contact a community navigator immediately\u2014this is a post-termination reconsideration case, not a standard renewal.",
+    "Prepare the renewal form with member's current address and have pay stubs ready for submission.",
+    "Navigator should file a reconsideration request citing the address-change fact pattern (notice never received) to strengthen the case.",
+    "If the state denies reconsideration, be ready to request a fair hearing; DL-HEARING permits coverage to stay in place during the hearing if requested before termination\u2014but termination already occurred, so timing and strategy are critical for a navigator."
+  ],
+  "citations": [
+    {
+      "chunk_id": "DL-RECON",
+      "quote": "If coverage is terminated for a procedural reason\u2014missing paperwork, an unanswered notice\u2014there is a 90-day reconsideration period after the termination date. Returning the renewal information within it lets the state reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed.",
+      "verified": true
+    },
+    {
+      "chunk_id": "RT-NOTICE",
+      "quote": "If mail has been returned, the state must attempt other contact methods. A person who never effectively received a notice has strong grounds in reconsideration and fair hearing.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-HEARING",
+      "quote": "A person who disagrees with a termination or an exemption denial can request a fair hearing, and a request made before the termination takes effect can keep coverage in place while the hearing is decided.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "error",
+      "detail": "The response deadline (2026-07-06T23:59:00) has passed. This is NOT the end: after a procedural termination there is a 90-day reconsideration window (running to about 2026-10-04) in which coverage can be restored without a brand-new application. Act now, with a navigator.",
+      "data": {
+        "days_remaining": -11.4
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "info",
+      "detail": "Qualifying hours: 92 per month (92h employment) \u2014 meets the 80-hour standard.",
+      "data": {
+        "total": 92,
+        "shortfall": 0
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (1) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "noncompliance",
+    "received_at": "2026-06-06T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-07-06T23:59:00",
+    "hours_remaining": -273.0,
+    "breached": true
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DL-RECON",
+      "score": 14.04,
+      "matched_terms": [
+        "90",
+        "coverage",
+        "notice",
+        "reconsideration",
+        "terminated",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 7.485,
+      "matched_terms": [
+        "coverage",
+        "days",
+        "notice",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 5.368,
+      "matched_terms": [
+        "90",
+        "days"
+      ]
+    },
+    {
+      "chunk_id": "RT-NOTICE",
+      "score": 5.055,
+      "matched_terms": [
+        "coverage",
+        "notice",
+        "reconsideration"
+      ]
+    },
+    {
+      "chunk_id": "DL-HEARING",
+      "score": 12.461,
+      "matched_terms": [
+        "fair",
+        "hearing",
+        "rights",
+        "termination"
+      ]
+    },
+    {
+      "chunk_id": "RT-NOADVICE",
+      "score": 4.965,
+      "matched_terms": [
+        "appeal",
+        "rights"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "noncompliance notice \u00b7 -11 days remaining \u00b7 due 2026-07-06T23:59:00 \u00b7 DEADLINE PASSED"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "3 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "noncompliance notice deadline reconsideration window 90 days coverage terminated"
+      },
+      "result_digest": "query 'noncompliance notice deadline reconsideration window 90 days coverage terminated' \u2192 DL-RECON (14.04), DL-CURE (7.485), EX-INCARC (5.368), RT-NOTICE (5.055)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "reconsideration fair hearing member rights appeal procedural termination"
+      },
+      "result_digest": "query 'reconsideration fair hearing member rights appeal procedural termination' \u2192 DL-HEARING (12.461), DL-RECON (7.862), RT-NOTICE (6.637), RT-NOADVICE (4.965)"
+    }
+  ],
+  "escalate": true,
+  "escalate_reason": "Deadline has passed (coverage terminated July 6; as-of date is July 18). This is no longer a standard compliance-check case. Member is within the 90-day reconsideration window and has a strong procedural defense (notice never received due to address change). Navigator intervention is required to file reconsideration request, assess fair-hearing options, and ensure coverage is restored before the October 4 window closes. Member is otherwise fully compliant (hours met, documents ready)\u2014this is a system fix, not a member failure.",
+  "policy_notes": [],
+  "model_decision": "refer_navigator",
+  "groundedness": {
+    "total_quotes": 3,
+    "verified_quotes": 3,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 7777,
+    "output_tokens": 1453
+  }
+}

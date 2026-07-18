@@ -1,0 +1,144 @@
+{
+  "request_id": "case_10",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker+skill",
+  "mode": "live",
+  "decision": "refer_navigator",
+  "memo": "Clock: 6.6 days remain on verification notice (due 2026-07-24 23:59). Exemption conflict: member claims caretaker exemption (believes it covers the 15-year-old), but EX-CARETAKER states the exemption covers 'a dependent child age 13 or younger' \u2014 the child is 15, so the exemption does not fit the rule as written. Screening flags this as unsupported and warns not to rely on it without navigator confirmation. Hours: member has reported zero qualifying hours and is 80 hours short. No documents on hand. Member has essentially halted reporting based on the exemption belief. DECISION: Facts in conflict (claimed exemption vs. rule language on child age) + tight deadline + zero hours + zero documents = this case requires human navigator review immediately. Navigator should confirm the child's age/dependency status and help the member execute a response plan (either locate correct exemption if one applies, or gather 80 qualifying work/activity hours from past or current month plus supporting documents) within the 6-day window. The 30-day cure window exists if the notice deadline passes, but best path is to respond now.",
+  "member_impact": "We need to talk with you right away\u2014you have 6 days left to respond to your renewal notice. You believe the caretaker exemption covers your 15-year-old, but the rule says the exemption is for children age 13 or younger. We need to check if something else might apply to you, or gather proof that you did 80 hours of qualifying work or activities last month. A helper can work with you to figure this out and get it done before the deadline. Please contact [program] today to talk to someone who can help\u2014this is free and fast.",
+  "missing_documents": [
+    "Proof of qualifying work or activities (80+ hours: pay stubs, employer letter, school enrollment, job training certificate, community service record, or self-attestation with employer contact)"
+  ],
+  "recommended_actions": [
+    "Contact program navigator immediately to clarify child age and exemption eligibility",
+    "If exemption does not apply, gather all work/activity documentation from past month (pay stubs, employer letters, school proof, etc.)",
+    "If work is informal/cash-paid, obtain employer letter or sign self-attestation with employer contact info",
+    "Submit response before 2026-07-24 23:59 (6 days); if deadline passes, 30-day cure window applies after non-compliance notice"
+  ],
+  "citations": [
+    {
+      "chunk_id": "EX-CARETAKER",
+      "quote": "A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "quote": "Adults age 19 to 64 covered through Medicaid expansion must complete at least 80 hours per month of qualifying activities, unless an exemption applies",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "warning",
+      "detail": "Only 7 days remain to respond (due 2026-07-24T23:59:00). If more time is genuinely needed, the 30-day cure window after a non-compliance notice is a safety net \u2014 but do not plan on it.",
+      "data": {
+        "days_remaining": 6.6
+      }
+    },
+    {
+      "check": "exemption_unsupported",
+      "severity": "warning",
+      "detail": "The member believes the 'caretaker_young_child' exemption applies, but the facts on file do not show it. Do not rely on it without a navigator confirming \u2014 plan for the hours path in parallel.",
+      "data": null
+    },
+    {
+      "check": "hours",
+      "severity": "error",
+      "detail": "Qualifying hours: 0 per month (none reported) \u2014 80 hours SHORT of the 80-hour standard. Close the gap with any qualifying mix (work, school, job training, community service) or confirm an exemption before relying on hours.",
+      "data": {
+        "total": 0,
+        "shortfall": 80
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (0) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "verification",
+    "received_at": "2026-06-24T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-07-24T23:59:00",
+    "hours_remaining": 159.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "EX-CARETAKER",
+      "score": 22.569,
+      "matched_terms": [
+        "13",
+        "age",
+        "caretaker",
+        "child",
+        "dependent",
+        "exemption",
+        "younger"
+      ]
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "score": 3.959,
+      "matched_terms": [
+        "age",
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "score": 2.681,
+      "matched_terms": [
+        "age",
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 1.151,
+      "matched_terms": [
+        "exemption"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "verification notice \u00b7 7 days remaining \u00b7 due 2026-07-24T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "4 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "caretaker exemption child age 13 younger dependent"
+      },
+      "result_digest": "query 'caretaker exemption child age 13 younger dependent' \u2192 EX-CARETAKER (22.569), EX-BENEFITS (3.959), REQ-80H (2.681), EX-INCARC (1.151)"
+    }
+  ],
+  "escalate": true,
+  "escalate_reason": "Claimed exemption (caretaker of 15-year-old) does not match rule language (age 13 or younger). Member has zero hours reported and zero documents. Deadline in 6 days. Facts in conflict; free human navigation required to resolve exemption status and execute response plan before deadline or cure window.",
+  "policy_notes": [],
+  "model_decision": "refer_navigator",
+  "groundedness": {
+    "total_quotes": 2,
+    "verified_quotes": 2,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 6983,
+    "output_tokens": 1210
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request_id": "case_05",
+  "one_liner": "Deadline passed 12 days ago; coverage terminated — the 90-day window is running",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0005", "member_id": "SYN-MCD-0005", "state": "Demo State (SYNTHETIC)", "age": 38},
+  "notice": {"type": "noncompliance", "title": "Coverage ending: renewal information not received", "notice_date": "2026-06-06T00:00:00", "respond_by": "2026-07-06T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "38-year-old line cook who moved apartments in May; the renewal packet went to the old address and was never seen. Coverage terminated July 6 for a procedural reason. Works 92 hours a month and has pay stubs — eligibility was never actually in question.",
+  "activities": [
+    {"type": "employment", "description": "restaurant line cook", "monthly_hours": 92}
+  ],
+  "documents_on_hand": ["pay_stubs"]
+}

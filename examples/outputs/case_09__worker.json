@@ -1,0 +1,241 @@
+{
+  "request_id": "case_09",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker",
+  "mode": "live",
+  "decision": "action_needed",
+  "memo": "Member has sufficient hours (84/month) and pay stubs in hand\u2014technically compliant on substance. BUT: only 5.6 days remain; no home internet means online portal is not an option; prior mail returns at this address create high risk of non-delivery if envelope is sent by post. IMMEDIATE ACTION: (1) Do NOT rely on mail. (2) Call state help line (REQ-DEMOSTATE) TODAY or visit county office in person with pay stubs and the form from the notice. (3) Ask for phone confirmation number. (4) Involve a navigator or legal-aid office NOW\u2014this is the exact procedural-loss scenario they exist to prevent. Member-facing: provide phone number, county office address, and tell them a navigator can call on their behalf if they prefer.",
+  "member_impact": "Good news: Your job hours are plenty. You have the pay stubs to prove it. Bad news: You only have 5 days to send your answer in, and mail sometimes doesn't reach the state at your address.\n\nHere's what to do RIGHT NOW (today or tomorrow):\n\n1. **Call or visit in person\u2014do NOT mail it.** The state takes phone calls and accepts forms at the county office. A phone call is fastest. Get a confirmation number so you know they got it.\n\n2. **Have your pay stubs ready** when you call or go in. They prove your hours.\n\n3. **Ask for a free helper.** A community navigator or legal-aid office can call the state for you and make sure your answer gets through. Call them today and tell them you have a deadline.\n\n**What you need by July 23:**\n- Your most recent pay stubs (you have these)\n- The form from the notice (if you still have it)\n- A phone or in-person confirmation that the state got your answer\n\nDon't wait. Call today.",
+  "missing_documents": [],
+  "recommended_actions": [
+    "Member must call state help line TODAY or visit county office in person\u2014do NOT mail the response given prior mail return history and 5-day window",
+    "Have pay stubs ready (they are already on hand and meet the standard)",
+    "Obtain confirmation number or written receipt from the state showing what date and time the response was received",
+    "Contact a certified navigator, community health worker, or legal-aid office today to assist\u2014this is a procedural-loss risk case and free help is available",
+    "Verify current address on file with the state before submission; if address is stale, update it before calling or visiting"
+  ],
+  "citations": [
+    {
+      "chunk_id": "DOC-WORK",
+      "quote": "Pay stubs covering the month are the cleanest proof of employment hours.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "quote": "Qualifying activities include working for pay (including self-employment)",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "quote": "Demo State (synthetic) accepts reporting online through the member portal, by phone through the state help line, by mail using the form attached to the notice, and in person at a county office. If one channel fails or is unavailable to you, the others remain valid; keep a copy or a confirmation number for anything you submit.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "quote": "A renewal or verification notice states a respond-by date. Responding through any accepted channel by that date \u2014 with even a partial packet plus a note about what is coming \u2014 is far better than silence.",
+      "verified": true
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "quote": "Certified navigators, community health workers, legal-aid offices, and the state Medicaid ombudsman help with renewals, exemptions, and hearings at no charge. For a passed deadline, a denied exemption, conflicting records, or any notice that does not make sense, a navigator or legal aid should be involved \u2014 these are exactly the cases they exist for.",
+      "verified": true
+    },
+    {
+      "chunk_id": "RT-NOTICE",
+      "quote": "If mail has been returned, the state must attempt other contact methods. A person who never effectively received a notice has strong grounds in reconsideration and fair hearing.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "warning",
+      "detail": "Only 6 days remain to respond (due 2026-07-23T23:59:00). If more time is genuinely needed, the 30-day cure window after a non-compliance notice is a safety net \u2014 but do not plan on it.",
+      "data": {
+        "days_remaining": 5.6
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "info",
+      "detail": "Qualifying hours: 84 per month (84h employment) \u2014 meets the 80-hour standard.",
+      "data": {
+        "total": 84,
+        "shortfall": 0
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (1) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    },
+    {
+      "check": "barriers",
+      "severity": "warning",
+      "detail": "Practical barriers present: mail from the agency has been returned before \u2014 the notice address may be stale; verify it and ask for electronic notices | no reliable internet access \u2014 the online portal cannot be the only reporting plan; identify the phone and paper channels now. These are the conditions under which eligible people lose coverage procedurally \u2014 involve a navigator or legal-aid office.",
+      "data": {
+        "count": 2
+      }
+    }
+  ],
+  "deadline": {
+    "track": "renewal",
+    "received_at": "2026-06-23T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-07-23T23:59:00",
+    "hours_remaining": 135.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DOC-SELF",
+      "score": 8.319,
+      "matched_terms": [
+        "employment",
+        "hour",
+        "income"
+      ]
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 7.812,
+      "matched_terms": [
+        "employment",
+        "pay",
+        "stubs"
+      ]
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "score": 6.622,
+      "matched_terms": [
+        "80",
+        "hour",
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "score": 5.797,
+      "matched_terms": [
+        "employment",
+        "income",
+        "pay"
+      ]
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "score": 2.936,
+      "matched_terms": [
+        "response"
+      ]
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "score": 2.633,
+      "matched_terms": [
+        "deadline"
+      ]
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "score": 2.239,
+      "matched_terms": [
+        "mail"
+      ]
+    },
+    {
+      "chunk_id": "RT-NOTICE",
+      "score": 2.212,
+      "matched_terms": [
+        "mail"
+      ]
+    },
+    {
+      "chunk_id": "DOC-SCHOOL",
+      "score": 2.38,
+      "matched_terms": [
+        "office"
+      ]
+    },
+    {
+      "chunk_id": "REQ-SIXMONTH",
+      "score": 5.242,
+      "matched_terms": [
+        "pay",
+        "proof",
+        "stubs"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 3.452,
+      "matched_terms": [
+        "documentation",
+        "proof"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "renewal notice \u00b7 6 days remaining \u00b7 due 2026-07-23T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "4 findings (0 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "80-hour requirement employment income pay stubs documentation"
+      },
+      "result_digest": "query '80-hour requirement employment income pay stubs documentation' \u2192 DOC-SELF (8.319), DOC-WORK (7.812), EX-OVERVIEW (6.622), REQ-ACTIVITIES (5.797)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "mail submission deadline response method"
+      },
+      "result_digest": "query 'mail submission deadline response method' \u2192 DL-RESPOND (2.936), RT-HELP (2.633), REQ-DEMOSTATE (2.239), RT-NOTICE (2.212)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "phone mail in-person county office reporting channels"
+      },
+      "result_digest": "query 'phone mail in-person county office reporting channels' \u2192 REQ-DEMOSTATE (16.763), RT-NOTICE (3.456), EX-OVERVIEW (2.441), DOC-SCHOOL (2.38)"
+    },
+    {
+      "step": 6,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "documentation acceptance pay stubs employment proof"
+      },
+      "result_digest": "query 'documentation acceptance pay stubs employment proof' \u2192 DOC-WORK (8.681), REQ-SIXMONTH (5.242), REQ-ACTIVITIES (3.66), EX-INCARC (3.452)"
+    }
+  ],
+  "escalate": true,
+  "escalate_reason": "Practical procedural barriers present: no home internet (portal inaccessible) + prior mail returns (post-only submission creates high non-delivery risk) + tight 5.6-day deadline. Member is substantively eligible but at high risk of procedural termination. Navigator or legal-aid involvement required to ensure successful contact and submission confirmation via phone or in-person channel.",
+  "policy_notes": [],
+  "model_decision": "action_needed",
+  "groundedness": {
+    "total_quotes": 6,
+    "verified_quotes": 6,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 9499,
+    "output_tokens": 1679
+  }
+}

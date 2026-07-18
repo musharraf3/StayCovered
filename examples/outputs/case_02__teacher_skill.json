@@ -1,0 +1,257 @@
+{
+  "request_id": "case_02",
+  "model": "claude-fable-5",
+  "arm": "teacher+skill",
+  "mode": "live",
+  "decision": "likely_exempt",
+  "memo": "CASE case_02 \u2014 verification notice ('report your qualifying hours'), due 2026-08-05T23:59:00; get_deadline: not breached, 447.0 hours remaining (screening: 19 days remain). GATE 1 (clock): open \u2014 proceed. GATE 2 (exemption): screening flags likely exemption 'caretaker_young_child' \u2014 member is parent of children ages 6 and 9. Rule: 'A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt' (EX-CARETAKER). If confirmed, hours are irrelevant: 'If an exemption applies, the 80-hour requirement does not apply to you at all' (EX-OVERVIEW). Proof per screening and EX-CARETAKER: child's birth certificate or a benefits record showing the child's age. DECISION: likely_exempt. GATE 3 noted for belt-and-suspenders: screening shows 40 qualifying hours/month (40h employment), 40 hours SHORT of the 80-hour standard (REQ-80H); evidence check shows every claimed activity has an accepted document (pay stubs \u2014 DOC-WORK: 'Pay stubs covering the month are the cleanest proof'). Plan: submit the exemption claim with the child's birth certificate or benefits record via any Demo State channel (portal, phone, mail form, in person \u2014 REQ-DEMOSTATE), and include the 40 hours of pay stubs in the same packet in case the state reads the facts differently. Keep confirmation number/copy. No escalation: deadline open, facts consistent, exemption strongly supported.",
+  "member_impact": "Good news. You care for children ages 6 and 9. Because they are under 14, the 80-hour work rule likely does not apply to you at all. You do not need to be scared of the 40-hour gap. Here is what to do. Gather one document for each child: a birth certificate, or a benefits record that shows the child's age. Also keep your pay stubs from your cleaning job \u2014 send them too, just to be safe. Send everything by August 5, 2026. You can send it online through the member portal, by phone at the state help line, by mail with the form that came with your notice, or in person at the county office. Keep a copy of what you send, and write down any confirmation number. You have time, and you have a clear path. Free help is available at your community organization if you want a hand.",
+  "missing_documents": [
+    "Child's birth certificate OR benefits record showing the child's age (for the caretaker exemption)"
+  ],
+  "recommended_actions": [
+    "Claim the caretaker exemption on the response: attach a birth certificate or benefits record showing a dependent child age 13 or younger (children are 6 and 9)",
+    "Belt-and-suspenders: include the pay stubs for the 40 hours of office-cleaning work in the same packet",
+    "Submit by 2026-08-05T23:59:00 through any accepted channel (member portal, state help line, mail-in form from the notice, or county office in person)",
+    "Keep a copy of everything submitted and record the confirmation number",
+    "Going forward, keep pay stubs and records as you go \u2014 renewals recur every six months"
+  ],
+  "citations": [
+    {
+      "chunk_id": "EX-CARETAKER",
+      "quote": "A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt",
+      "verified": true
+    },
+    {
+      "chunk_id": "EX-CARETAKER",
+      "quote": "the child's birth certificate, a benefits record showing the child's age, or documentation of the care relationship",
+      "verified": true
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "quote": "If an exemption applies, the 80-hour requirement does not apply to you at all, and reporting hours is unnecessary.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "quote": "must complete at least 80 hours per month of qualifying activities, unless an exemption applies",
+      "verified": true
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "quote": "Pay stubs covering the month are the cleanest proof of employment hours.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "quote": "accepts reporting online through the member portal, by phone through the state help line, by mail using the form attached to the notice, and in person at a county office",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-SIXMONTH",
+      "quote": "Keeping proof as you go \u2014 pay stubs, enrollment letters, volunteer logs \u2014 turns each renewal from a scramble into an envelope.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "info",
+      "detail": "19 days remain to respond (due 2026-08-05T23:59:00).",
+      "data": {
+        "days_remaining": 18.6
+      }
+    },
+    {
+      "check": "exemption",
+      "severity": "info",
+      "detail": "Likely exemption: caretaker young child. If confirmed, the 80-hour requirement does not apply at all. Proof to submit: your child's birth certificate or benefits record showing their age.",
+      "data": {
+        "exemption": "caretaker_young_child",
+        "proof": "your child's birth certificate or benefits record showing their age"
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "error",
+      "detail": "Qualifying hours: 40 per month (40h employment) \u2014 40 hours SHORT of the 80-hour standard. Close the gap with any qualifying mix (work, school, job training, community service) or confirm an exemption before relying on hours.",
+      "data": {
+        "total": 40,
+        "shortfall": 40
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (1) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "verification",
+    "received_at": "2026-07-08T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-08-05T23:59:00",
+    "hours_remaining": 447.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "EX-CARETAKER",
+      "score": 17.734,
+      "matched_terms": [
+        "age",
+        "caretaker",
+        "child",
+        "dependent",
+        "exemption",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "score": 4.921,
+      "matched_terms": [
+        "age",
+        "exemption",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "score": 2.681,
+      "matched_terms": [
+        "age",
+        "exemption"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 2.305,
+      "matched_terms": [
+        "exemption",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "score": 13.709,
+      "matched_terms": [
+        "80",
+        "apply",
+        "does",
+        "exemption",
+        "hour",
+        "not",
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "EX-ALIGN",
+      "score": 3.9,
+      "matched_terms": [
+        "exemption",
+        "not",
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 3.839,
+      "matched_terms": [
+        "exemption",
+        "not",
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 10.398,
+      "matched_terms": [
+        "accepted",
+        "employment",
+        "hours",
+        "pay",
+        "stubs"
+      ]
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "score": 5.156,
+      "matched_terms": [
+        "reporting",
+        "submit"
+      ]
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "score": 4.488,
+      "matched_terms": [
+        "employment",
+        "hours",
+        "pay"
+      ]
+    },
+    {
+      "chunk_id": "REQ-SIXMONTH",
+      "score": 4.256,
+      "matched_terms": [
+        "pay",
+        "stubs"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "verification notice \u00b7 19 days remaining \u00b7 due 2026-08-05T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "4 findings (1 error-level, 1 likely exemption)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "caretaker exemption dependent child age proof documents"
+      },
+      "result_digest": "query 'caretaker exemption dependent child age proof documents' \u2192 EX-CARETAKER (17.734), EX-BENEFITS (4.921), REQ-80H (2.681), EX-INCARC (2.305)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "exemption overview 80-hour requirement does not apply"
+      },
+      "result_digest": "query 'exemption overview 80-hour requirement does not apply' \u2192 EX-OVERVIEW (13.709), REQ-80H (6.864), EX-ALIGN (3.9), DL-CURE (3.839)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "accepted documentation pay stubs employment hours reporting how to submit"
+      },
+      "result_digest": "query 'accepted documentation pay stubs employment hours reporting how to submit' \u2192 DOC-WORK (10.398), REQ-DEMOSTATE (5.156), REQ-ACTIVITIES (4.488), REQ-SIXMONTH (4.256)"
+    }
+  ],
+  "escalate": false,
+  "escalate_reason": null,
+  "policy_notes": [],
+  "model_decision": "likely_exempt",
+  "groundedness": {
+    "total_quotes": 7,
+    "verified_quotes": 7,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 14378,
+    "output_tokens": 1777
+  }
+}

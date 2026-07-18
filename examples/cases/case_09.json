@@ -1,0 +1,13 @@
+{
+  "request_id": "case_09",
+  "one_liner": "Hours met, proof in hand — but five days left, no internet, and mail has bounced before",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0009", "member_id": "SYN-MCD-0009", "state": "Demo State (SYNTHETIC)", "age": 58, "no_internet_access": true, "mail_returned_before": true},
+  "notice": {"type": "renewal", "title": "Six-month renewal: verify your work hours", "notice_date": "2026-06-23T00:00:00", "respond_by": "2026-07-23T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "58-year-old janitor working 84 hours a month with current pay stubs. The notice sat unopened for three weeks. Five days remain; there is no home internet, and agency mail has been returned at least once before at a prior address.",
+  "activities": [
+    {"type": "employment", "description": "school district janitor", "monthly_hours": 84}
+  ],
+  "documents_on_hand": ["pay_stubs"]
+}

@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>StayCovered — case_02</title><style>
+:root{--ink:#1a202c;--sub:#5a6472;--line:#e2e8f0;--brand:#1d4e89;--brand-lt:#e8f0fa;
+--ok:#1a7f37;--ok-bg:#e8f5ec;--warn:#9a6700;--warn-bg:#fff8e5;--err:#b42318;--err-bg:#fdecea;
+--chip:#eef2f7;--trace:#102a43}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);
+background:#f5f7fa;padding:28px;line-height:1.55}
+.wrap{max-width:900px;margin:0 auto}
+header{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+header h1{font-size:26px;color:var(--brand)}
+header .tag{color:var(--sub);font-size:13px}
+.banner{border-radius:10px;padding:12px 16px;font-weight:700;margin:14px 0;font-size:15px}
+.banner.approve{background:var(--ok-bg);border:1.5px solid var(--ok);color:var(--ok)}
+.banner.request_documentation{background:var(--brand-lt);border:1.5px solid var(--brand);color:var(--brand)}
+.banner.denial_supported{background:var(--chip);border:1.5px solid var(--sub);color:var(--ink)}
+.banner.escalate_human{background:var(--warn-bg);border:1.5px solid var(--warn);color:var(--warn)}
+.clock{display:inline-block;font-family:Consolas,monospace;font-size:12.5px;padding:3px 10px;
+border-radius:999px;background:var(--chip)}
+.clock.breach{background:var(--err-bg);color:var(--err);font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;
+margin:14px 0;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.card h2{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--sub);
+margin-bottom:10px}
+.finding{border-left:4px solid;border-radius:6px;padding:10px 14px;margin:8px 0;font-size:14px}
+.finding.error{border-color:var(--err);background:var(--err-bg)}
+.finding.warning{border-color:var(--warn);background:var(--warn-bg)}
+.finding.info{border-color:var(--sub);background:var(--chip)}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;
+padding:2px 9px;border-radius:999px;text-transform:uppercase}
+.badge.code{background:var(--trace);color:#fff}
+.badge.err{background:var(--err-bg);color:var(--err)}
+.badge.ok{background:var(--ok-bg);color:var(--ok)}
+.trace{font-family:Consolas,monospace;font-size:12.5px}
+.trace .step{display:flex;gap:10px;padding:7px 10px;border-left:3px solid var(--brand);
+background:#fafbfc;border-radius:6px;margin:6px 0;align-items:baseline}
+.trace .n{color:#fff;background:var(--brand);border-radius:999px;min-width:20px;height:20px;
+display:inline-flex;align-items:center;justify-content:center;font-size:11px;flex:none}
+.trace .tool{color:var(--brand);font-weight:700}
+.trace .in{color:var(--sub)}
+.memo{font-size:14.5px;white-space:pre-wrap}
+.impact{background:var(--brand-lt);border:1px solid var(--brand);border-radius:8px;
+padding:10px 14px;font-size:14px;margin-top:10px}
+.cite{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:8px 12px;
+margin:8px 0 0;font-size:13.5px}
+.cite .src{color:var(--brand);font-weight:600}
+.cite .q{font-style:italic;color:var(--sub)}
+.retr{font-size:12.5px;color:var(--sub);margin-top:8px;font-family:Consolas,monospace}
+.retr .bar{display:inline-block;height:8px;background:var(--brand);border-radius:4px;
+vertical-align:middle;margin-right:6px}
+.actions li{margin:6px 0 6px 4px}
+.policy{background:var(--err-bg);border:1.5px solid var(--err);border-radius:10px;
+padding:12px 16px;margin:14px 0;font-size:13.5px}
+.policy b{color:var(--err)}
+.escalate{background:var(--warn-bg);border:1.5px solid var(--warn);color:var(--warn);
+border-radius:10px;padding:12px 16px;font-weight:600;margin:14px 0}
+footer{color:var(--sub);font-size:12.5px;margin-top:18px;border-top:1px solid var(--line);
+padding-top:12px}
+.gg{font-weight:600}
+</style></head><body><div class="wrap">
+<header><h1>StayCovered</h1><span class="tag">renewal preparation ·
+Demo State (SYNTHETIC) · claude-haiku-4-5-20251001 · arm: worker+skill</span></header>
+<div style="margin:6px 0 0"><span class="clock">verification notice · respond by 2026-08-05T23:59:00 · 19 days remaining</span></div>
+<div class="banner likely_exempt">LIKELY EXEMPT — claim it; the 80-hour rule may not apply at all</div>
+<div class="card"><h2>The notice</h2>
+<p><b>Action needed: report your qualifying hours</b> — SYNTHETIC MEMBER 0002,
+case SYN-MCD-0002</p>
+<p style="color:var(--sub);font-size:13.5px;margin-top:6px">29-year-old single parent of two children, ages 6 and 9, working about 40 hours a month cleaning offices. Received an hours-reporting notice and is frightened of losing coverage because 40 is less than 80. Does not know the caretaker exemption exists.</p></div><div class="card"><h2>Renewal screening <span class="badge code">computed in code — not by AI</span></h2><div class="finding info"><b>deadline</b><div>19 days remain to respond (due 2026-08-05T23:59:00).</div></div><div class="finding info"><b>exemption</b><div>Likely exemption: caretaker young child. If confirmed, the 80-hour requirement does not apply at all. Proof to submit: your child&#x27;s birth certificate or benefits record showing their age.</div></div><div class="finding error"><b>hours</b><div>Qualifying hours: 40 per month (40h employment) — 40 hours SHORT of the 80-hour standard. Close the gap with any qualifying mix (work, school, job training, community service) or confirm an exemption before relying on hours.</div></div><div class="finding info"><b>evidence</b><div>Every claimed activity (1) has an accepted document on hand.</div></div></div><div class="card"><h2>Agent tool trace <span class="badge code">every step logged</span></h2><div class="trace"><div class="step"><span class="n">1</span><span><span class="tool">get_deadline</span><span class="in">()</span> → verification notice · 19 days remaining · due 2026-08-05T23:59:00</span></div><div class="step"><span class="n">2</span><span><span class="tool">get_screening</span><span class="in">()</span> → 4 findings (1 error-level, 1 likely exemption)</span></div><div class="step"><span class="n">3</span><span><span class="tool">lookup_rules</span><span class="in">({&quot;query&quot;: &quot;caretaker exemption dependent child age 13&quot;})</span> → query &#x27;caretaker exemption dependent child age 13&#x27; → EX-CARETAKER (19.633), EX-BENEFITS (3.959), REQ-80H (2.681), EX-INCARC (1.151)</span></div><div class="step"><span class="n">4</span><span><span class="tool">lookup_rules</span><span class="in">({&quot;query&quot;: &quot;exemption overview 80-hour requirement does not apply&quot;})</span> → query &#x27;exemption overview 80-hour requirement does not apply&#x27; → EX-OVERVIEW (13.709), REQ-80H (6.864), EX-ALIGN (3.9), DL-CURE (3.839)</span></div><div class="step"><span class="n">5</span><span><span class="tool">lookup_rules</span><span class="in">({&quot;query&quot;: &quot;caretaker exemption proof document birth certificate benefits record&quot;})</span> → query &#x27;caretaker exemption proof document birth certificate benefits record&#x27; → EX-CARETAKER (16.439), EX-BENEFITS (9.057), DOC-KEEP (4.532), EX-OVERVIEW (4.217)</span></div></div></div><div class="card"><h2>Case notes (for the helper)</h2><div class="memo">Clock gate: 18.6 days remain to respond (due 2026-08-05). Not breached.
+
+Exemption gate: EXEMPTION FOUND. Member is a parent of two children, ages 6 and 9. Both are age 13 or younger. Per EX-CARETAKER: &#x27;A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt.&#x27; Per EX-OVERVIEW: &#x27;If an exemption applies, the 80-hour requirement does not apply to you at all, and reporting hours is unnecessary.&#x27; Hours are irrelevant if exemption confirmed.
+
+Screening confirms proof document on hand or readily available: child&#x27;s birth certificate or benefits record showing age (per EX-CARETAKER: &#x27;Proof is simple: the child&#x27;s birth certificate, a benefits record showing the child&#x27;s age, or documentation of the care relationship.&#x27;)
+
+Belt-and-suspenders: Member has 40 hours of employment (pay stubs on hand). Hours fall 40 short of 80-hour standard per screening. However, hours become moot if caretaker exemption is claimed and confirmed. Recommend submitting exemption claim with one or both children&#x27;s birth certificates or benefits records, plus keeping pay stubs in file in case state questions the exemption basis.
+
+Action: Check that birth certificates or Medicaid benefits records (or equivalent proof of dependent status and age) are in hand. Submit exemption claim before 2026-08-05.</div><div class="impact"><b>Letter to the member (plain language):</b> Good news — because you care for children under 14, the 80-hour work rule likely does not apply to you at all.
+
+You do not need to count or report your hours. You just need to send proof that you have these two children.
+
+A birth certificate for each child works. So does a Medicaid benefits record or any document showing their ages.
+
+Send this proof by August 5, 2026 — that is the date the state needs to hear from you.
+
+Keep a copy of everything you send, along with any confirmation number the state gives you.
+
+You have 18 days. This is fixable.</div></div><div class="card"><h2>Citations — machine-verified</h2><div class="cite"><span class="src">[EX-CARETAKER] Exemption: caretaker of a young child or disabled person</span> <span class="badge ok">verified</span><div class="q">“A parent, guardian, or caretaker relative of a dependent child age 13 or younger is exempt”</div></div><div class="cite"><span class="src">[EX-CARETAKER] Exemption: caretaker of a young child or disabled person</span> <span class="badge ok">verified</span><div class="q">“Proof is simple: the child&#x27;s birth certificate, a benefits record showing the child&#x27;s age, or documentation of the care relationship.”</div></div><div class="cite"><span class="src">[EX-OVERVIEW] Exemptions come first</span> <span class="badge ok">verified</span><div class="q">“If an exemption applies, the 80-hour requirement does not apply to you at all, and reporting hours is unnecessary.”</div></div><div class="cite"><span class="src">[REQ-80H] The 80-hour monthly standard</span> <span class="badge ok">verified</span><div class="q">“Adults age 19 to 64 covered through Medicaid expansion must complete at least 80 hours per month of qualifying activities, unless an exemption applies.”</div></div><div class="retr"><b>why these sources (retrieval scores):</b><div><span class="bar" style="width:70px"></span>EX-CARETAKER · BM25 19.633 · matched: 13, age, caretaker, child, dependent, exemption</div><div><span class="bar" style="width:48px"></span>EX-OVERVIEW · BM25 13.709 · matched: 80, apply, does, exemption, hour, not</div><div><span class="bar" style="width:16px"></span>DOC-KEEP · BM25 4.532 · matched: document, record</div><div><span class="bar" style="width:14px"></span>EX-BENEFITS · BM25 3.959 · matched: age, exemption</div><div><span class="bar" style="width:13px"></span>EX-ALIGN · BM25 3.9 · matched: exemption, not, requirement</div></div></div><div class="card"><h2>Recommended actions</h2><ol class="actions"><li>Gather birth certificate(s) for child age 6 and/or child age 9 (or equivalent proof such as Medicaid/benefits record showing age and dependent relationship).</li><li>Check the notice for where to submit documents (online portal, fax, mail, or in-person office). If unclear, call the number on the notice.</li><li>Submit the exemption claim with the proof document(s) before 2026-08-05T23:59:00.</li><li>Keep a copy or screenshot of the documents sent, and a confirmation number if provided.</li></ol></div><footer><span class="gg">Groundedness guard: 4/4 citations verified verbatim against chunks actually retrieved in this review.</span>
+The notice clock, screening, hours math, citation verification, and policy overrides are
+deterministic code — inspect them in the repo. StayCovered prepares people; it files
+nothing, decides nothing, and is not legal advice. All data on this page is synthetic.</footer>
+</div></body></html>

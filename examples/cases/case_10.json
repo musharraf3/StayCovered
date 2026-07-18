@@ -1,0 +1,11 @@
+{
+  "request_id": "case_10",
+  "one_liner": "Believes the caretaker exemption covers a 15-year-old, has stopped reporting entirely, six days left — human help now",
+  "synthetic": true,
+  "member": {"name": "SYNTHETIC MEMBER 0010", "member_id": "SYN-MCD-0010", "state": "Demo State (SYNTHETIC)", "age": 47, "dependent_children_ages": [15], "claims_exemption": "caretaker_young_child"},
+  "notice": {"type": "verification", "title": "Action needed: report your qualifying hours", "notice_date": "2026-06-24T00:00:00", "respond_by": "2026-07-24T23:59:00"},
+  "as_of": "2026-07-18T09:00:00",
+  "situation": "47-year-old caring for a 15-year-old, convinced the caretaker exemption applies (it generally covers children 13 and younger) and has therefore reported nothing — no hours, no documents. Six days remain on the notice, and the facts and the belief point in different directions.",
+  "activities": [],
+  "documents_on_hand": []
+}

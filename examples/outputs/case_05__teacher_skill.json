@@ -1,0 +1,235 @@
+{
+  "request_id": "case_05",
+  "model": "claude-fable-5",
+  "arm": "teacher+skill",
+  "mode": "live",
+  "decision": "refer_navigator",
+  "memo": "GATE 1 \u2014 CLOCK: get_deadline shows the noncompliance notice (dated 2026-06-06) had a respond-by of 2026-07-06T23:59; as of 2026-07-18 it is BREACHED (hours_remaining -273.0). Deadline passed \u2192 refer_navigator per decision tree, regardless of the strong merits below. Screening confirms the 90-day reconsideration window is running (to about 2026-10-04): 'Returning the renewal information within it lets the state reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed' (DL-RECON). GATE 2 \u2014 EXEMPTIONS: screening flagged no likely exemption; none claimed by member. GATE 3 \u2014 HOURS/PROOF (for the reconsideration packet): screening computed 92 qualifying hours/month vs the 80-hour standard \u2014 'meets the 80-hour standard,' shortfall 0 \u2014 and 'Every claimed activity (1) has an accepted document on hand' (pay stubs). Pay stubs are the accepted proof: 'Pay stubs covering the month are the cleanest proof of employment hours' (DOC-WORK). CASE THEORY: purely procedural termination \u2014 packet went to old address after May move; eligibility was never in question. Member should also update their mailing address when reopening. HELP: 'For a passed deadline... a navigator or legal aid should be involved' (RT-HELP), free of charge. Channels: portal, phone, mail, in person (REQ-DEMOSTATE) \u2014 keep confirmation numbers. Time-critical: connect with a navigator now; the packet is essentially ready.",
+  "member_impact": "Dear Member, first the good news: you can still fix this. Your coverage ended on July 6 because the renewal papers went to your old apartment. That is a paperwork problem, not a problem with you. The rules give you a 90-day window to send in your renewal and get your coverage back. If it is approved, your coverage is restored back to July 6, like it never stopped. You do not have to start over with a new application. But the clock is running, so please act this week. Here is what to do: 1) Call a free helper called a navigator, or a legal aid office, right away. They help with exactly this, and it costs nothing. 2) Gather your pay stubs. You work 92 hours a month, which is more than enough. 3) Send your renewal with your pay stubs. You can do it online, by phone, by mail, or in person at the county office. Keep a copy or a confirmation number. 4) Give the state your new address so mail reaches you. Your window runs to about October 4, 2026 \u2014 but sooner is much safer. You can do this, and free help is waiting.",
+  "missing_documents": [],
+  "recommended_actions": [
+    "Contact a certified navigator or legal aid office immediately \u2014 free help for exactly this situation (passed deadline, procedural termination)",
+    "Submit the renewal information within the 90-day reconsideration window (running to about 2026-10-04 per screening) to reopen the case without a new application",
+    "Include pay stubs showing 92 hours/month of employment (meets the 80-hour standard per screening; pay stubs are accepted proof)",
+    "Update the mailing address with the state so future notices arrive at the current apartment",
+    "Use any accepted channel \u2014 member portal, state help line, mail, or county office in person \u2014 and keep a copy or confirmation number"
+  ],
+  "citations": [
+    {
+      "chunk_id": "DL-RECON",
+      "quote": "If coverage is terminated for a procedural reason \u2014 missing paperwork, an unanswered notice \u2014 there is a 90-day reconsideration period after the termination date.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-RECON",
+      "quote": "Returning the renewal information within it lets the state reopen the case without a brand-new application, and coverage is restored back to the termination date if eligibility is confirmed.",
+      "verified": true
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "quote": "For a passed deadline, a denied exemption, conflicting records, or any notice that does not make sense, a navigator or legal aid should be involved \u2014 these are exactly the cases they exist for.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "quote": "Pay stubs covering the month are the cleanest proof of employment hours.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "quote": "Demo State (synthetic) accepts reporting online through the member portal, by phone through the state help line, by mail using the form attached to the notice, and in person at a county office.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "error",
+      "detail": "The response deadline (2026-07-06T23:59:00) has passed. This is NOT the end: after a procedural termination there is a 90-day reconsideration window (running to about 2026-10-04) in which coverage can be restored without a brand-new application. Act now, with a navigator.",
+      "data": {
+        "days_remaining": -11.4
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "info",
+      "detail": "Qualifying hours: 92 per month (92h employment) \u2014 meets the 80-hour standard.",
+      "data": {
+        "total": 92,
+        "shortfall": 0
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (1) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "noncompliance",
+    "received_at": "2026-06-06T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-07-06T23:59:00",
+    "hours_remaining": -273.0,
+    "breached": true
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DL-RECON",
+      "score": 18.397,
+      "matched_terms": [
+        "90",
+        "coverage",
+        "day",
+        "procedural",
+        "reconsideration",
+        "termination",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 8.101,
+      "matched_terms": [
+        "coverage",
+        "day",
+        "termination",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "DL-HEARING",
+      "score": 4.026,
+      "matched_terms": [
+        "coverage",
+        "termination"
+      ]
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "score": 3.869,
+      "matched_terms": [
+        "termination",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "score": 7.499,
+      "matched_terms": [
+        "free",
+        "help",
+        "navigator"
+      ]
+    },
+    {
+      "chunk_id": "RT-LANGUAGE",
+      "score": 7.095,
+      "matched_terms": [
+        "free",
+        "help"
+      ]
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "score": 4.644,
+      "matched_terms": [
+        "help",
+        "member"
+      ]
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 11.268,
+      "matched_terms": [
+        "accepted",
+        "employment",
+        "hours",
+        "pay",
+        "proof",
+        "stubs"
+      ]
+    },
+    {
+      "chunk_id": "REQ-SIXMONTH",
+      "score": 5.242,
+      "matched_terms": [
+        "pay",
+        "proof",
+        "stubs"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 5.041,
+      "matched_terms": [
+        "accepted",
+        "documentation",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "score": 4.488,
+      "matched_terms": [
+        "employment",
+        "hours",
+        "pay"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "noncompliance notice \u00b7 -11 days remaining \u00b7 due 2026-07-06T23:59:00 \u00b7 DEADLINE PASSED"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "3 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "90-day reconsideration window procedural termination restore coverage"
+      },
+      "result_digest": "query '90-day reconsideration window procedural termination restore coverage' \u2192 DL-RECON (18.397), DL-CURE (8.101), DL-HEARING (4.026), DL-RESPOND (3.869)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "free help navigator member rights assistance"
+      },
+      "result_digest": "query 'free help navigator member rights assistance' \u2192 RT-HELP (7.499), RT-LANGUAGE (7.095), REQ-DEMOSTATE (4.644), DL-HEARING (2.441)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "accepted documentation pay stubs employment hours proof"
+      },
+      "result_digest": "query 'accepted documentation pay stubs employment hours proof' \u2192 DOC-WORK (11.268), REQ-SIXMONTH (5.242), EX-INCARC (5.041), REQ-ACTIVITIES (4.488)"
+    }
+  ],
+  "escalate": true,
+  "escalate_reason": "Response deadline passed 2026-07-06 and coverage was terminated; the 90-day reconsideration window is running (to about 2026-10-04). Time-critical \u2014 member needs a navigator or legal aid now to reopen the case, though merits are strong (92 hours documented, shortfall 0).",
+  "policy_notes": [],
+  "model_decision": "refer_navigator",
+  "groundedness": {
+    "total_quotes": 5,
+    "verified_quotes": 5,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 14032,
+    "output_tokens": 1948
+  }
+}

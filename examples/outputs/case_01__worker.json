@@ -1,0 +1,141 @@
+{
+  "request_id": "case_01",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker",
+  "mode": "live",
+  "decision": "ready_to_submit",
+  "memo": "Member reports two part-time jobs totaling 96 monthly hours (grocery store 64h + gas station 32h), exceeding the 80-hour standard. Screening confirms: hours met (96 \u2265 80), zero shortfall, both activities documented. Pay stubs on hand for both employers satisfy the accepted-document requirement. Deadline: 22 days remain (due 2026-08-08). No exemptions claimed or flagged. All pieces in place to respond to the renewal notice. Member should gather any other pay stubs not yet collected and submit with a cover sheet listing both jobs and monthly hours.",
+  "member_impact": "Good news: you have everything you need to send back to the state.\n\nYour two jobs add up to 96 hours a month. That's more than the 80 hours they ask for.\n\nYou have the pay stubs from both your grocery store job and your gas station job. Those are exactly what the state wants to see.\n\nYou have until August 8, 2026 to send your answer. That gives you about 3 weeks.\n\nWhat to do:\n1. Gather your pay stubs from both employers (make sure they show the hours).\n2. Write a short note listing both jobs and the hours each month.\n3. Mail or upload it all to the address on the renewal notice.\n\nThat's it. You're set.",
+  "missing_documents": [],
+  "recommended_actions": [
+    "Gather all current pay stubs from both the grocery store and gas station.",
+    "Create a cover sheet listing both jobs and monthly hours (grocery: 64h, gas station: 32h, total: 96h).",
+    "Submit pay stubs and cover sheet to the state by August 8, 2026."
+  ],
+  "citations": [
+    {
+      "chunk_id": "REQ-80H",
+      "quote": "Adults age 19 to 64 covered through Medicaid expansion must complete at least 80 hours per month of qualifying activities, unless an exemption applies. Any combination counts toward the total in the same month: the standard is the combined hours, not any single activity.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "quote": "Qualifying activities include working for pay (including self-employment), attending school or an education program at least half-time, participating in a job-training or workforce program, and performing community service or volunteering with a qualifying organization. Income from seasonal or irregular work can qualify by monthly average. Hours from different activities may be combined freely.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DOC-WORK",
+      "quote": "Pay stubs covering the month are the cleanest proof of employment hours.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "info",
+      "detail": "22 days remain to respond (due 2026-08-08T23:59:00).",
+      "data": {
+        "days_remaining": 21.6
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "info",
+      "detail": "Qualifying hours: 96 per month (64h employment + 32h employment) \u2014 meets the 80-hour standard.",
+      "data": {
+        "total": 96,
+        "shortfall": 0
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (2) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    }
+  ],
+  "deadline": {
+    "track": "renewal",
+    "received_at": "2026-07-10T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-08-08T23:59:00",
+    "hours_remaining": 519.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 11.584,
+      "matched_terms": [
+        "accepted",
+        "employment",
+        "pay",
+        "stubs",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "EX-OVERVIEW",
+      "score": 6.622,
+      "matched_terms": [
+        "80",
+        "hour",
+        "requirement"
+      ]
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "score": 5.49,
+      "matched_terms": [
+        "employment",
+        "pay",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "REQ-80H",
+      "score": 5.259,
+      "matched_terms": [
+        "80",
+        "hour"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "renewal notice \u00b7 22 days remaining \u00b7 due 2026-08-08T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "3 findings (0 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "80-hour work requirement accepted documentation pay stubs employment"
+      },
+      "result_digest": "query '80-hour work requirement accepted documentation pay stubs employment' \u2192 DOC-WORK (11.584), EX-OVERVIEW (6.622), REQ-ACTIVITIES (5.49), REQ-80H (5.259)"
+    }
+  ],
+  "escalate": false,
+  "escalate_reason": null,
+  "policy_notes": [],
+  "model_decision": "ready_to_submit",
+  "groundedness": {
+    "total_quotes": 3,
+    "verified_quotes": 3,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 4470,
+    "output_tokens": 829
+  }
+}

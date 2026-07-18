@@ -1,0 +1,255 @@
+{
+  "request_id": "case_09",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker+skill",
+  "mode": "live",
+  "decision": "refer_navigator",
+  "memo": "HOURS AND PROOF CONFIRMED; PRACTICAL BARRIERS REQUIRE IMMEDIATE NAVIGATOR HELP.\n\nClock: 5.6 days remain (due 2026-07-23 23:59). Deadline has not passed.\n\nScreening results:\n\u2014 Hours: 84/month employment meets the 80-hour standard (DOC-WORK: \"Pay stubs covering the month are the cleanest proof of employment hours\").\n\u2014 Evidence: Pay stubs on hand for the claimed activity; no documents missing.\n\u2014 Exemptions: None claimed or found.\n\nHOWEVER, screening flags two critical barriers:\n1. Mail from agency returned before at this address \u2014 notice address may be stale (RT-NOTICE: \"If mail has been returned, the state must attempt other contact methods\").\n2. No reliable internet access \u2014 online portal cannot be the only reporting plan.\n\nThese are the conditions under which eligible people lose coverage procedurally. The member is compliant and has the proof, but with 5 days left, no internet, and mail delivery risk, a certified navigator or legal-aid office must help immediately to:\n\u2014 Confirm the current address on file and, if needed, update it.\n\u2014 Select the safest submission channel: phone (REQ-DEMOSTATE: \"Demo State accepts reporting... by phone through the state help line\") or in-person at county office (safest given mail risk).\n\u2014 Keep a confirmation number (DL-RESPOND: \"keep a copy or a confirmation number for anything you submit\").\n\u2014 If the address cannot be verified or mail is refused again, the 90-day reconsideration window exists (DL-RECON: \"If coverage is terminated for a procedural reason \u2014 missing paperwork, an unanswered notice \u2014 there is a 90-day reconsideration period after the termination date\"), but preventing termination now is far safer.\n\nRefer to certified navigator, community health worker, legal aid, or state Medicaid ombudsman without delay (RT-HELP).",
+  "member_impact": "Good news: you are doing the work. You have 84 hours a month, and you have your pay stubs to prove it. That meets what the state is asking for.\n\nBut we need to be careful about HOW you send them in. Your mail has had problems in the past, and you do not have internet at home. With only five days left, we need to get you help right now so the papers get where they need to go and nothing gets lost.\n\nPlease call a Medicaid navigator or your legal-aid office TODAY. You can find them by calling the state help line (the number is on your notice). Tell them: \"My mail has been returned before, I do not have internet, and I have five days to send in my work hours proof.\"\n\nThey will help you pick the safest way to send your pay stubs \u2014 maybe by phone, maybe in person at the county office. They will also make sure the state has the right address for you.\n\nYou have the proof you need. We just need to make sure it gets there safely. Do not delay \u2014 call today.",
+  "missing_documents": [],
+  "recommended_actions": [
+    "Contact a certified Medicaid navigator, community health worker, legal-aid office, or state Medicaid ombudsman TODAY to secure immediate help with submission channel and address verification.",
+    "Confirm current mailing address on file with the state before submitting (may have changed since prior returned mail).",
+    "Plan submission through non-mail channel: phone (state help line) or in-person at county office \u2014 do NOT rely on mail given history of returns.",
+    "Keep confirmation number or written proof of submission, whatever channel is used (per DL-RESPOND).",
+    "Have pay stubs ready and with the helper when they assist."
+  ],
+  "citations": [
+    {
+      "chunk_id": "DOC-WORK",
+      "quote": "Pay stubs covering the month are the cleanest proof of employment hours.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "quote": "Demo State (synthetic) accepts reporting online through the member portal, by phone through the state help line, by mail using the form attached to the notice, and in person at a county office.",
+      "verified": true
+    },
+    {
+      "chunk_id": "RT-NOTICE",
+      "quote": "If mail has been returned, the state must attempt other contact methods.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "quote": "Responding through any accepted channel by that date \u2014 with even a partial packet plus a note about what is coming \u2014 is far better than silence. Silence is what turns a paperwork question into a termination.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-RECON",
+      "quote": "If coverage is terminated for a procedural reason \u2014 missing paperwork, an unanswered notice \u2014 there is a 90-day reconsideration period after the termination date.",
+      "verified": true
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "quote": "Certified navigators, community health workers, legal-aid offices, and the state Medicaid ombudsman help with renewals, exemptions, and hearings at no charge.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "warning",
+      "detail": "Only 6 days remain to respond (due 2026-07-23T23:59:00). If more time is genuinely needed, the 30-day cure window after a non-compliance notice is a safety net \u2014 but do not plan on it.",
+      "data": {
+        "days_remaining": 5.6
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "info",
+      "detail": "Qualifying hours: 84 per month (84h employment) \u2014 meets the 80-hour standard.",
+      "data": {
+        "total": 84,
+        "shortfall": 0
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "info",
+      "detail": "Every claimed activity (1) has an accepted document on hand.",
+      "data": {
+        "missing": []
+      }
+    },
+    {
+      "check": "barriers",
+      "severity": "warning",
+      "detail": "Practical barriers present: mail from the agency has been returned before \u2014 the notice address may be stale; verify it and ask for electronic notices | no reliable internet access \u2014 the online portal cannot be the only reporting plan; identify the phone and paper channels now. These are the conditions under which eligible people lose coverage procedurally \u2014 involve a navigator or legal-aid office.",
+      "data": {
+        "count": 2
+      }
+    }
+  ],
+  "deadline": {
+    "track": "renewal",
+    "received_at": "2026-06-23T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-07-23T23:59:00",
+    "hours_remaining": 135.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 9.879,
+      "matched_terms": [
+        "accepted",
+        "employment",
+        "pay",
+        "proof",
+        "stubs"
+      ]
+    },
+    {
+      "chunk_id": "REQ-SIXMONTH",
+      "score": 5.242,
+      "matched_terms": [
+        "pay",
+        "proof",
+        "stubs"
+      ]
+    },
+    {
+      "chunk_id": "EX-INCARC",
+      "score": 5.041,
+      "matched_terms": [
+        "accepted",
+        "documentation",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "score": 4.204,
+      "matched_terms": [
+        "accepted",
+        "documentation",
+        "proof"
+      ]
+    },
+    {
+      "chunk_id": "DL-RECON",
+      "score": 8.727,
+      "matched_terms": [
+        "90",
+        "reconsideration",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "DL-CURE",
+      "score": 5.063,
+      "matched_terms": [
+        "days",
+        "window"
+      ]
+    },
+    {
+      "chunk_id": "RT-HELP",
+      "score": 2.633,
+      "matched_terms": [
+        "deadline"
+      ]
+    },
+    {
+      "chunk_id": "REQ-DEMOSTATE",
+      "score": 6.882,
+      "matched_terms": [
+        "mail",
+        "phone",
+        "submit"
+      ]
+    },
+    {
+      "chunk_id": "RT-NOTICE",
+      "score": 4.907,
+      "matched_terms": [
+        "mail",
+        "methods"
+      ]
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "score": 4.534,
+      "matched_terms": [
+        "renewal",
+        "response"
+      ]
+    },
+    {
+      "chunk_id": "REQ-VERIFY",
+      "score": 4.151,
+      "matched_terms": [
+        "electronic",
+        "submit"
+      ]
+    },
+    {
+      "chunk_id": "EX-ALIGN",
+      "score": 2.506,
+      "matched_terms": [
+        "confirm"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "renewal notice \u00b7 6 days remaining \u00b7 due 2026-07-23T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "4 findings (0 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "accepted documentation pay stubs proof of employment"
+      },
+      "result_digest": "query 'accepted documentation pay stubs proof of employment' \u2192 DOC-WORK (9.879), REQ-SIXMONTH (5.242), EX-INCARC (5.041), EX-BENEFITS (4.204)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "reconsideration window 90 days deadline missed late"
+      },
+      "result_digest": "query 'reconsideration window 90 days deadline missed late' \u2192 DL-RECON (8.727), EX-INCARC (5.368), DL-CURE (5.063), RT-HELP (2.633)"
+    },
+    {
+      "step": 5,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "submit renewal response mail electronic delivery methods fax phone"
+      },
+      "result_digest": "query 'submit renewal response mail electronic delivery methods fax phone' \u2192 REQ-DEMOSTATE (6.882), RT-NOTICE (4.907), DL-RESPOND (4.534), REQ-VERIFY (4.151)"
+    },
+    {
+      "step": 6,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "mailing address verification confirm change address"
+      },
+      "result_digest": "query 'mailing address verification confirm change address' \u2192 DL-RESPOND (2.936), EX-ALIGN (2.506), REQ-VERIFY (2.001)"
+    }
+  ],
+  "escalate": true,
+  "escalate_reason": "Practical barriers (mail delivery history + no internet access) combined with tight deadline (5 days remaining) and time-critical renewal create risk of procedural loss of coverage despite member's compliance. Immediate navigator involvement required to ensure submission succeeds and is documented. Screening flagged these barriers explicitly as conditions under which eligible people lose coverage procedurally.",
+  "policy_notes": [],
+  "model_decision": "refer_navigator",
+  "groundedness": {
+    "total_quotes": 6,
+    "verified_quotes": 6,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 13185,
+    "output_tokens": 2011
+  }
+}

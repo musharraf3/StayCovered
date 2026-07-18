@@ -1,0 +1,163 @@
+{
+  "request_id": "case_04",
+  "model": "claude-haiku-4-5-20251001",
+  "arm": "worker+skill",
+  "mode": "live",
+  "decision": "action_needed",
+  "memo": "Clock: 15 days remaining (due 2026-08-01). Exemption: none apply. Hours: 90/month meets the 80-hour standard. CRITICAL ISSUE: The member believes cash work 'doesn't count' because there are no pay stubs. This is incorrect. Screening shows missing proof for the employment claim. SOLUTION: The rulebook (DOC-WORK) explicitly states 'Cash work counts; undocumented does not mean unprovable.' Four paths to proof exist: (1) pay stubs if any are available, (2) employer letter from one or more clients, (3) tax record (1099, Schedule C), or (4) self-attestation with the employer's (client's) contact information. The self-attestation path is explicitly accepted 'where records genuinely cannot be produced.' Member has strong case if any ONE of these documents can be obtained. Recommend: (1) contact the families she cleans for and request a brief signed letter stating hours worked in the past month or past 30 days (most likely path); or (2) if the families cannot or will not provide a letter, write a one-paragraph statement saying how many hours she works each week, the names of the clients (her employers), and provide at least one client's phone number so the state can verify. Attach the letter or statement to the application. Do not delay \u2014 respond by 2026-08-01.",
+  "member_impact": "Good news: your 90 hours a month is more than enough, and cash work DOES count, even without pay stubs. Here is what you need to do: Ask one or more of the families you clean for to write a short letter saying how many hours you work for them each month. It can be just a few sentences. If they will not write a letter, you can write one yourself saying how many hours you work each week and give the names and phone number of at least one family so the state can call and check. Send this letter with your renewal by August 1, 2026. That is the only thing missing. You have this.",
+  "missing_documents": [
+    "employment: need one of pay_stubs, employer_letter, tax_record, self_attestation_with_employer_contact"
+  ],
+  "recommended_actions": [
+    "Contact the families she cleans for and request a brief letter stating monthly hours worked. (Easiest and fastest.)",
+    "Alternatively: write a one-paragraph self-attestation stating weekly hours, names of clients, and phone number of at least one client for state verification.",
+    "Assemble the chosen proof document and the employment details into the renewal packet.",
+    "Submit by the respond-by date of 2026-08-01 through any accepted channel (mail, phone, online portal if available)."
+  ],
+  "citations": [
+    {
+      "chunk_id": "DOC-WORK",
+      "quote": "Pay stubs covering the month are the cleanest proof of employment hours. If pay stubs are unavailable \u2014 cash pay, a small employer, lost records \u2014 an employer letter stating hours works, and where records genuinely cannot be produced, a self-attestation with the employer's contact information is accepted while the state verifies. Cash work counts; undocumented does not mean unprovable.",
+      "verified": true
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "quote": "Qualifying activities include working for pay (including self-employment), attending school or an education program at least half-time, participating in a job-training or workforce program, and performing community service or volunteering with a qualifying organization.",
+      "verified": true
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "quote": "A renewal or verification notice states a respond-by date. Responding through any accepted channel by that date \u2014 with even a partial packet plus a note about what is coming \u2014 is far better than silence. Silence is what turns a paperwork question into a termination.",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "check": "deadline",
+      "severity": "info",
+      "detail": "15 days remain to respond (due 2026-08-01T23:59:00).",
+      "data": {
+        "days_remaining": 14.6
+      }
+    },
+    {
+      "check": "hours",
+      "severity": "info",
+      "detail": "Qualifying hours: 90 per month (90h employment) \u2014 meets the 80-hour standard.",
+      "data": {
+        "total": 90,
+        "shortfall": 0
+      }
+    },
+    {
+      "check": "evidence",
+      "severity": "error",
+      "detail": "1 claimed activity is missing proof \u2014 employment: need one of pay_stubs, employer_letter, tax_record, self_attestation_with_employer_contact. Hours that cannot be evidenced do not count when the state verifies.",
+      "data": {
+        "missing": [
+          "employment: need one of pay_stubs, employer_letter, tax_record, self_attestation_with_employer_contact"
+        ]
+      }
+    }
+  ],
+  "deadline": {
+    "track": "verification",
+    "received_at": "2026-07-04T00:00:00",
+    "as_of": "2026-07-18T09:00:00",
+    "due_at": "2026-08-01T23:59:00",
+    "hours_remaining": 351.0,
+    "breached": false
+  },
+  "retrieval": [
+    {
+      "chunk_id": "DOC-WORK",
+      "score": 17.878,
+      "matched_terms": [
+        "attestation",
+        "cash",
+        "employer",
+        "employment",
+        "letter",
+        "self",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "DOC-SELF",
+      "score": 5.795,
+      "matched_terms": [
+        "employment",
+        "self"
+      ]
+    },
+    {
+      "chunk_id": "REQ-ACTIVITIES",
+      "score": 5.49,
+      "matched_terms": [
+        "employment",
+        "self",
+        "work"
+      ]
+    },
+    {
+      "chunk_id": "EX-BENEFITS",
+      "score": 3.402,
+      "matched_terms": [
+        "documentation",
+        "letter"
+      ]
+    },
+    {
+      "chunk_id": "DL-RESPOND",
+      "score": 4.362,
+      "matched_terms": [
+        "accepted",
+        "verification"
+      ]
+    }
+  ],
+  "tool_trace": [
+    {
+      "step": 1,
+      "tool": "get_deadline",
+      "tool_input": {},
+      "result_digest": "verification notice \u00b7 15 days remaining \u00b7 due 2026-08-01T23:59:00"
+    },
+    {
+      "step": 2,
+      "tool": "get_screening",
+      "tool_input": {},
+      "result_digest": "3 findings (1 error-level, 0 likely exemptions)"
+    },
+    {
+      "step": 3,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "cash work informal employment self-attestation employer letter documentation"
+      },
+      "result_digest": "query 'cash work informal employment self-attestation employer letter documentation' \u2192 DOC-WORK (17.878), DOC-SELF (5.795), REQ-ACTIVITIES (5.49), EX-BENEFITS (3.402)"
+    },
+    {
+      "step": 4,
+      "tool": "lookup_rules",
+      "tool_input": {
+        "query": "accepted documents proof of work hours employment verification"
+      },
+      "result_digest": "query 'accepted documents proof of work hours employment verification' \u2192 DOC-WORK (7.763), REQ-ACTIVITIES (4.488), DL-RESPOND (4.362), DOC-SELF (3.819)"
+    }
+  ],
+  "escalate": false,
+  "escalate_reason": null,
+  "policy_notes": [],
+  "model_decision": "action_needed",
+  "groundedness": {
+    "total_quotes": 3,
+    "verified_quotes": 3,
+    "unverified": []
+  },
+  "usage": {
+    "input_tokens": 7454,
+    "output_tokens": 1384
+  }
+}
