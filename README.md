@@ -12,6 +12,8 @@ Federal Medicaid work requirements are rolling out now — statewide programs be
 
 The state tells you THAT you must prove something. Nothing tells you HOW. That gap sits entirely on the member's side — which means software can actually fill it.
 
+![Left: a synthetic state notice demanding 80 hours with termination language. Right: StayCovered finding the caretaker exemption in code and writing a grade-4.6 letter that starts with good news](docs/the_gap.png)
+
 ## What this tool is — and is not
 
 StayCovered **prepares the person, not the paperwork system**. It reads the notice, screens for exemptions, does the hours math, builds the document checklist, and writes a plain-language letter about what to gather and when it is due. It never interacts with any government system, files nothing, decides nothing, and gives no legal advice. Think of the posture as TurboTax's: the IRS is unchanged; the person walks in prepared.
