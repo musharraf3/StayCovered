@@ -97,7 +97,12 @@ def build_user_prompt(request: dict) -> str:
 def _post(payload: dict, retries: int = 3) -> dict:
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key:
-        raise RuntimeError("ANTHROPIC_API_KEY not set — use --offline for the demo mode.")
+        raise RuntimeError(
+            "ANTHROPIC_API_KEY is not set, so the model cannot be called.\n\n"
+            "To see StayCovered work without a key, run the bundled demo:\n"
+            "    python -m staycovered review --case examples/cases/case_02.json --offline\n\n"
+            "--offline is a flag on that command. The evaluation harness in\n"
+            "evals/run_evals.py re-runs the agent for real and does need a key.")
     req = urllib.request.Request(
         API_URL,
         data=json.dumps(payload).encode("utf-8"),
